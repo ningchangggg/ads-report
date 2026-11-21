@@ -130,16 +130,27 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .ph .r.big{font-size:12px;padding:2px 6px}
 }
 @media (max-width:340px){.grid{grid-template-columns:1fr}}
-.nav{display:flex;justify-content:space-between;gap:8px;font-size:13px;margin-bottom:14px}
-.nav a{color:var(--accent);text-decoration:none;font-weight:500;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
-.nav a[aria-disabled="true"]{visibility:hidden}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:14px;margin-bottom:-22px;position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0}
+.nav a,.nav select{color:var(--accent);text-decoration:none;font:inherit;font-weight:700;border:1px solid var(--line);border-radius:999px;background:var(--paper);min-height:40px;display:inline-flex;align-items:center}
+.nav .home{padding:0 14px}
+.pick{display:flex;align-items:center;gap:6px}
+.arw{width:40px;justify-content:center;font-size:20px}
+.arw[aria-disabled="true"]{opacity:.3;pointer-events:none}
+.nav select{padding:0 30px 0 14px;appearance:none;-webkit-appearance:none;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,var(--accent) 50%),linear-gradient(135deg,var(--accent) 50%,transparent 50%);background-position:calc(100% - 16px) 50%,calc(100% - 11px) 50%;background-size:5px 5px;background-repeat:no-repeat;font-family:var(--mono)}
+.nav a:focus-visible,.nav select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 </style>
 </head>
 <body>
 
 <div class="wrap">
+<nav class="nav" aria-label="日期切換">
+    <a class="home" href="../">⌂ 回首頁</a>
+    <div class="pick"><a id="prev" class="arw" href="#" aria-disabled="true" aria-label="前一天">‹</a>
+      <label class="sel"><span class="sr">選擇日期</span><select id="day" aria-label="選擇日期"><option value="2026-11-20">11/20</option></select></label>
+      <a id="next" class="arw" href="#" aria-disabled="true" aria-label="後一天">›</a></div>
+  </nav>
 <header>
-  <nav class="nav" aria-label="日期切換"><a id="prev" href="#" aria-disabled="true">← 前一天</a><a href="../">所有日期</a><a id="next" href="#" aria-disabled="true">後一天 →</a></nav>
   <div class="eyebrow">Meta Ads · 中文日曆（暖風煦煦）· 2026/11/20</div>
   <h1>受眾與素材分析報告</h1>
   <div class="src">資料：Meta 廣告 API（本機唯讀擷取，2026/11/21）｜期間：11/20 單日｜購買數與營收依 Meta 歸因設定｜素材圖片取自每支素材花費最高那則廣告的貼文</div>
@@ -418,8 +429,11 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </section>
 </div>
 <script>
-fetch("../days.json",{cache:"no-store"}).then(r=>r.json()).then(L=>{const d="2026-11-20";const i=L.indexOf(d);
- const set=(id,v)=>{if(!v)return;const a=document.getElementById(id);a.href="../"+v+"/";a.removeAttribute("aria-disabled");a.textContent=id=="prev"?"← "+v.slice(5).replace("-","/"):v.slice(5).replace("-","/")+" →"};
+fetch("../days.json",{cache:"no-store"}).then(r=>r.json()).then(L=>{const d="2026-11-20",i=L.indexOf(d),W="日一二三四五六";
+ const lab=v=>{const x=new Date(v+"T00:00:00");return (x.getMonth()+1)+"/"+x.getDate()+"（"+W[x.getDay()]+"）"};
+ const s=document.getElementById("day");s.innerHTML=L.map(v=>'<option value="'+v+'"'+(v==d?" selected":"")+">"+lab(v)+"</option>").join("");
+ s.onchange=()=>{location.href="../"+s.value+"/"};
+ const set=(id,v)=>{if(!v)return;const a=document.getElementById(id);a.href="../"+v+"/";a.removeAttribute("aria-disabled");a.title=lab(v)};
  if(i>=0){set("prev",L[i+1]);set("next",L[i-1])}}).catch(()=>{});
 </script>
 </body>
