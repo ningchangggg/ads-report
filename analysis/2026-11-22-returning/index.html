@@ -1,0 +1,112 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow">
+<title>舊客回購分析</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{--bg:#f5f6f8;--paper:#fff;--ink:#18212e;--ink2:#4a5566;--line:#dde2ea;--soft:#eef1f5;--accent:#1f5f8b;--good:#1f8a57;--mid:#b7791f;--bad:#c53b3b;
+--good-bg:#e3f4ea;--mid-bg:#fbf1dd;--bad-bg:#fbe5e3;--sp:#9aa7b8;--sans:"Noto Sans TC","PingFang TC",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f141b;--paper:#161d27;--ink:#e7ecf2;--ink2:#a3aebd;--line:#2a3443;--soft:#1d2633;--accent:#6fb0dc;--good:#4cc38a;--mid:#e0a64a;--bad:#ef6d6d;--good-bg:#16352a;--mid-bg:#3a2f18;--bad-bg:#3d1f22;--sp:#5d6b7e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f141b;--paper:#161d27;--ink:#e7ecf2;--ink2:#a3aebd;--line:#2a3443;--soft:#1d2633;--accent:#6fb0dc;--good:#4cc38a;--mid:#e0a64a;--bad:#ef6d6d;--good-bg:#16352a;--mid-bg:#3a2f18;--bad-bg:#3d1f22;--sp:#5d6b7e;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;padding:0 16px 64px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:34px}
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0;display:flex;gap:8px}
+.nav a{color:var(--accent);text-decoration:none;font-weight:700;border:1px solid var(--line);border-radius:999px;background:var(--paper);min-height:40px;display:inline-flex;align-items:center;padding:0 14px}
+.eb{font:600 12px var(--mono);letter-spacing:.12em;color:var(--accent)}
+h1{font-size:clamp(26px,5vw,38px);font-weight:900;margin:6px 0 4px;text-wrap:balance}h2{font-size:22px;font-weight:900;margin:0}h3{font-size:16px;margin:0 0 10px}
+.src{color:var(--ink2);font-size:13px;margin:0}
+.sec-h{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:16px}.sec-h .n{font:13px var(--mono);color:var(--ink2)}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:18px 20px;min-width:0}
+.lead{font-size:17px;font-weight:700;max-width:60ch;margin:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:16px}
+.tbl{overflow-x:auto;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%}th{font-size:12px;color:var(--ink2);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid var(--line);font-size:14px}td:first-child{white-space:nowrap}tr:last-child td{border-bottom:0}
+th.num,td.num{text-align:right}td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.sh{color:var(--ink2);font-size:12px;margin-right:6px}.muted{color:var(--ink2)}
+.r{font-weight:600;padding:1px 6px;border-radius:4px;font-family:var(--mono)}.r.good{background:var(--good-bg);color:var(--good)}.r.mid{background:var(--mid-bg);color:var(--mid)}.r.bad{background:var(--bad-bg);color:var(--bad)}
+.wk{display:grid;grid-template-columns:48px 1fr 96px;gap:10px;align-items:center;padding:5px 0;border-bottom:1px dashed var(--line)}.wk:last-child{border:0}
+.wl{font:13px var(--mono);color:var(--ink2)}.bars{display:flex;flex-direction:column;gap:3px}.b{height:9px;border-radius:2px}.b.sp{background:var(--sp)}.b.rv{background:var(--accent)}
+.wv{font:12px var(--mono);text-align:right;line-height:1.35;font-variant-numeric:tabular-nums}.wv b{color:var(--accent)}.wv .r{display:inline-block;margin-top:2px;font-size:11px}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--ink2);margin-bottom:8px;flex-wrap:wrap}.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+ol.f{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:10px}ol.f li{max-width:72ch}
+.hit{display:grid;grid-template-columns:52px 1fr 90px;gap:10px;align-items:center;padding:6px 0}.hl{font-size:13px}.hv{font:13px var(--mono);text-align:right}
+.hb-t{height:14px;background:var(--soft);border-radius:3px;overflow:hidden}.hb-f{height:100%}.hb-f.good{background:var(--good)}.hb-f.mid{background:var(--mid)}.hb-f.bad{background:var(--bad)}
+.traits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:12px}
+.trait{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--good);border-radius:10px;padding:14px 16px}.trait.bad{border-top-color:var(--bad)}
+.trait b{display:block;font-size:15px;margin-bottom:4px}.trait p{margin:0;font-size:13.5px;color:var(--ink2)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.cre{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.cre .ph{display:block;aspect-ratio:1/1;background:var(--soft)}.cre img{width:100%;height:100%;object-fit:cover;display:block}
+.cre figcaption{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}.cn{font-weight:700;font-size:13.5px;word-break:break-word}
+.cm{display:flex;flex-wrap:wrap;gap:4px 10px;font:12px var(--mono);color:var(--ink2)}.tag{font-family:var(--sans);font-size:11px;padding:0 6px;border:1px solid var(--line);border-radius:4px}
+.cre p{margin:0;font-size:13px}.cre figcaption>a{margin-top:auto;font-size:13px;color:var(--accent);font-weight:700;text-decoration:none}
+.cre.weak{border-color:var(--bad-bg)}
+.warn{background:var(--mid-bg);border-radius:10px;padding:12px 16px;font-size:14px}
+@media (max-width:560px){.gal{grid-template-columns:1fr 1fr;gap:10px}.cre p{font-size:12.5px}.cm span:nth-child(n+5){display:none}td,th{padding:8px}td{font-size:13px}.wk{grid-template-columns:42px 1fr 84px}}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.kpi{background:var(--paper);padding:14px 16px}.kpi .l{font-size:12px;color:var(--ink2)}.kpi .v{font:600 clamp(20px,5vw,26px) var(--mono);font-variant-numeric:tabular-nums}.kpi .s{font-size:12px;color:var(--ink2)}
+.bar{display:grid;grid-template-columns:120px 1fr 92px;gap:10px;align-items:center;padding:6px 0;border-bottom:1px dashed var(--line)}.bar:last-child{border:0}
+.bar .bl{font-size:13.5px}.bar .bv{font:13px var(--mono);text-align:right;font-variant-numeric:tabular-nums}.bar .bv span{display:block;font:11px var(--sans);color:var(--ink2)}
+.track{height:14px;background:var(--soft);border-radius:3px;overflow:hidden}.fill{height:100%;background:var(--accent);border-radius:3px}.fill.good{background:var(--good)}.fill.mid{background:var(--mid)}.fill.bad{background:var(--bad)}
+td.hot{font-weight:700;color:var(--accent)}
+@media (max-width:560px){.bar{grid-template-columns:92px 1fr 78px}}
+</style></head><body><div class="wrap">
+<nav class="nav"><a href="../../">⌂ 回首頁</a></nav>
+<header><div class="eb">SHOPIFY · 煦暖曆 · 專題分析</div><h1>舊客回購分析</h1>
+<p class="src">資料：Shopify 後台（Sidekick 唯讀查詢，2026/11/22）。「去年客人」＝買過 2026 年版商品的人（去年訂單由 Cyberbiz 匯入，以原始交易日期判斷）；「今年」＝2026/1/1–11/21；排除測試、取消、未完成付款與贈品。</p></header>
+
+<section><div class="panel"><p class="lead">去年 16,967 位客人，今年只有 12.9% 回來買實體日曆；還有 14,518 人沒買任何 2027 日曆。回來的人客單比新客高 11%，是最便宜的成長來源。</p></div></section>
+
+<section><div class="sec-h"><h2>總覽</h2><span class="n">01</span></div>
+<div class="kpis">
+<div class="kpi"><div class="l">去年客人</div><div class="v">16,967</div><div class="s">買過 2026 年版</div></div>
+<div class="kpi"><div class="l">回購實體日曆</div><div class="v">2,188</div><div class="s">12.9%</div></div>
+<div class="kpi"><div class="l">回購任何 2027 商品</div><div class="v">2,636</div><div class="s">15.5%</div></div>
+<div class="kpi"><div class="l">還沒買 2027 日曆</div><div class="v">14,518</div><div class="s">85.6%・皆有 Email</div></div>
+<div class="kpi"><div class="l">舊客今年客單</div><div class="v">1,645</div><div class="s">比新客高約 11%</div></div>
+</div>
+<div class="tbl" style="margin-top:14px"><table><tr><th>回來的 2,636 人（互斥）</th><th class="num">人數</th><th class="num">佔比</th></tr>
+<tr><td>買了實體日曆</td><td class="num">2,188</td><td class="num">83%</td></tr>
+<tr><td>沒買實體，只買手機版日曆</td><td class="num">261</td><td class="num">10%</td></tr>
+<tr><td>沒買日曆，只買手帳、語錄卡等</td><td class="num">187</td><td class="num">7%</td></tr></table></div></section>
+
+<section><div class="sec-h"><h2>誰比較會回來</h2><span class="n">02</span></div>
+<div class="grid2"><div class="panel"><h3>依去年買的商品：今年回購實體日曆的比例</h3><div class="bar"><div class="bl">2026 煦暖曆</div><div class="track"><div class="fill good" style="width:83.1%"></div></div><div class="bv">24.9%<span>1,398 / 5,605</span></div></div><div class="bar"><div class="bl">2026 花語日曆</div><div class="track"><div class="fill good" style="width:81.7%"></div></div><div class="bv">24.5%<span>216 / 881</span></div></div><div class="bar"><div class="bl">2026 煦暖月曆</div><div class="track"><div class="fill good" style="width:78.7%"></div></div><div class="bv">23.6%<span>216 / 915</span></div></div><div class="bar"><div class="bl">2026 旅行機票日曆</div><div class="track"><div class="fill mid" style="width:46.0%"></div></div><div class="bv">13.8%<span>700 / 5,076</span></div></div><div class="bar"><div class="bl">2026 語錄卡</div><div class="track"><div class="fill mid" style="width:34.8%"></div></div><div class="bv">10.4%<span>534 / 5,119</span></div></div><div class="bar"><div class="bl">其他 2026 商品</div><div class="track"><div class="fill bad" style="width:5.8%"></div></div><div class="bv">1.7%<span>60 / 3,433</span></div></div>
+<p class="src" style="margin-top:10px">同一人可能去年買多款，各組人數不能加總。旅行曆與語錄卡兩組合計約 8,900 人沒回來，是最大的名單。</p></div>
+<div class="panel"><h3>重點</h3><ol class="f">
+<li><b>煦暖曆、花語、月曆的老客最忠誠</b>，約四分之一回來。</li>
+<li><b>旅行曆老客只有 13.8%、語錄卡老客 10.4%</b>，名單最大、回得最少。</li>
+<li>回來的人約一半買同款 2027 版（1,192 人：煦暖 895、旅行 269、月曆 104），另一半換款，很多人改買新的幹話曆。</li>
+<li>舊客平均件數比新客多約 22%，比較願意一次買多本。</li></ol></div></div></section>
+
+<section><div class="sec-h"><h2>回來的人買了什麼</h2><span class="n">03</span></div>
+<div class="grid2"><div class="panel"><h3>2,636 位舊客今年買的 2027 商品（依人數）</h3><div class="bar"><div class="bl">煦暖曆</div><div class="track"><div class="fill " style="width:100.0%"></div></div><div class="bv">1,061 人<span>40%・132.8 萬</span></div></div><div class="bar"><div class="bl">幹話日曆</div><div class="track"><div class="fill " style="width:69.7%"></div></div><div class="bv">739 人<span>28%・89.1 萬</span></div></div><div class="bar"><div class="bl">旅行機票日曆</div><div class="track"><div class="fill " style="width:41.5%"></div></div><div class="bv">440 人<span>17%・53.8 萬</span></div></div><div class="bar"><div class="bl">實體手帳</div><div class="track"><div class="fill " style="width:32.3%"></div></div><div class="bv">343 人<span>13%・32.6 萬</span></div></div><div class="bar"><div class="bl">語錄卡</div><div class="track"><div class="fill " style="width:29.4%"></div></div><div class="bv">312 人<span>12%・21.9 萬</span></div></div><div class="bar"><div class="bl">手機版煦暖曆</div><div class="track"><div class="fill " style="width:19.8%"></div></div><div class="bv">210 人<span>8%・18.5 萬</span></div></div><div class="bar"><div class="bl">煦暖月曆</div><div class="track"><div class="fill " style="width:18.3%"></div></div><div class="bv">194 人<span>7%・8.8 萬</span></div></div><div class="bar"><div class="bl">鮮花圖鑑日曆</div><div class="track"><div class="fill " style="width:16.7%"></div></div><div class="bv">177 人<span>7%・17.2 萬</span></div></div><div class="bar"><div class="bl">手機版幹話曆</div><div class="track"><div class="fill " style="width:14.8%"></div></div><div class="bv">157 人<span>6%・14.6 萬</span></div></div><div class="bar"><div class="bl">日日法華曆</div><div class="track"><div class="fill " style="width:10.8%"></div></div><div class="bv">115 人<span>4%・13.2 萬</span></div></div><div class="bar"><div class="bl">手機版旅行曆</div><div class="track"><div class="fill " style="width:4.8%"></div></div><div class="bv">51 人<span>2%・4.3 萬</span></div></div>
+<p class="src" style="margin-top:10px">實體星座曆 12 款合計約 365 人次（11/22 起改為只賣手機版）；電子版手帳 14 人。一人可買多樣，人數加總會超過 2,636。</p></div>
+<div class="panel"><h3>去年買什麼 → 今年買什麼（人數）</h3>
+<div class="tbl"><table><tr><th>去年 ↓ ／今年 →</th><th class="num">煦暖曆</th><th class="num">幹話</th><th class="num">旅行</th><th class="num">鮮花</th><th class="num">月曆</th><th class="num">手帳</th><th class="num">語錄卡</th><th class="num">手機版</th></tr><tr><td>2026 煦暖曆</td><td class="num hot">895</td><td class="num">444</td><td class="num">176</td><td class="num">104</td><td class="num">104</td><td class="num">193</td><td class="num">167</td><td class="num">289</td></tr><tr><td>2026 旅行機票日曆</td><td class="num">224</td><td class="num hot">283</td><td class="num">269</td><td class="num">73</td><td class="num">48</td><td class="num">111</td><td class="num">77</td><td class="num">165</td></tr><tr><td>2026 語錄卡</td><td class="num hot">256</td><td class="num">211</td><td class="num">90</td><td class="num">40</td><td class="num">63</td><td class="num">106</td><td class="num">192</td><td class="num">180</td></tr><tr><td>2026 花語日曆</td><td class="num hot">116</td><td class="num">72</td><td class="num">54</td><td class="num">51</td><td class="num">19</td><td class="num">31</td><td class="num">33</td><td class="num">48</td></tr><tr><td>2026 煦暖月曆</td><td class="num hot">110</td><td class="num">70</td><td class="num">27</td><td class="num">14</td><td class="num">104</td><td class="num">40</td><td class="num">33</td><td class="num">50</td></tr></table></div>
+<p class="src" style="margin-top:10px">藍字＝該列最多。旅行曆老客最常改買幹話曆（283），語錄卡老客最常買煦暖曆（256）。</p></div></div></section>
+
+<section><div class="sec-h"><h2>幹話曆的客人是誰</h2><span class="n">04</span></div>
+<div class="grid2"><div class="panel"><h3>幹話曆買家 6,372 人</h3><div class="bar"><div class="bl">新客</div><div class="track"><div class="fill " style="width:87.0%"></div></div><div class="bv">87.0%<span>5,546 人</span></div></div><div class="bar"><div class="bl">舊客</div><div class="track"><div class="fill " style="width:13.0%"></div></div><div class="bv">13.0%<span>826 人</span></div></div>
+<p class="src" style="margin-top:10px">幹話曆是 2027 新品，主要在拉新；手帳也有 89% 是新客。</p></div>
+<div class="panel"><h3>826 位舊客從哪來</h3><div class="tbl"><table><tr><th>類型</th><th class="num">人數</th><th class="num">佔舊客</th></tr>
+<tr><td>去年買過 2026 年版</td><td class="num">776</td><td class="num">93.9%</td></tr>
+<tr><td>今年稍早先買其他 2027 商品</td><td class="num">37</td><td class="num">4.5%</td></tr>
+<tr><td>前一張單已取消／其他</td><td class="num">13</td><td class="num">1.6%</td></tr></table></div>
+<p class="src" style="margin-top:10px">這 776 人去年買的是煦暖曆 444、旅行曆 283、語錄卡 210、花語 72、月曆 69（可重複）。</p></div></div></section>
+
+<section><div class="sec-h"><h2>老客回流建議</h2><span class="n">05</span></div><div class="grid2">
+<div class="panel"><h3>分群推什麼</h3><div class="tbl"><table><tr><th>名單</th><th>主推</th></tr>
+<tr><td>2026 煦暖曆老客（約 4,200 人未回）</td><td>2027 煦暖曆＋幹話曆「一笑一暖」、手機版加購</td></tr>
+<tr><td>2026 旅行曆老客（約 4,400 人未回）</td><td>旅行曆＋幹話曆「厭世想出走」</td></tr>
+<tr><td>2026 語錄卡老客（約 4,600 人未回）</td><td>煦暖曆＋語錄卡、2027 語錄卡新款</td></tr>
+<tr><td>花語、月曆老客</td><td>鮮花圖鑑日曆／2027 月曆＋煦暖曆</td></tr>
+<tr><td>買過實體星座曆的人</td><td>星座手機版</td></tr></table></div></div>
+<div class="panel"><h3>做法與注意</h3><ol class="f">
+<li><b>時間點</b>：現在到元旦是「該換明年日曆」的時候，聖誕到貨截止前最有效。</li>
+<li><b>誘因</b>：後台已有「老客戶回購折 150（滿 750）」代碼，可搭配「買兩本送語錄卡」。</li>
+<li><b>通路</b>：Email／LINE，成本遠低於廣告每單約 992。</li>
+<li><b>名單品質要先確認</b>：未回購的 14,518 人中 14,510 人顯示同意收行銷信，比例異常高，可能是 Cyberbiz 匯入時預設訂閱；發信前要確認當初取得同意的方式。</li>
+<li>補齊 UTM，之後才分得出回流是來自 Email、LINE 還是廣告。</li></ol></div></div></section>
+</div></body></html>
