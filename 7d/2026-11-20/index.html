@@ -121,6 +121,9 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   td.set{background:var(--soft);border-radius:8px;padding:10px 12px}
   td.num{text-align:left;font-size:14px;white-space:normal}
   td.num::before{content:attr(data-l);display:block;font-family:var(--sans);font-size:11px;color:var(--ink2)}
+  td.num:nth-child(5){grid-row:span 2;display:flex;flex-direction:column;justify-content:center;align-items:center;background:var(--soft);border-radius:8px;padding:8px 4px}
+  td.num:nth-child(5)::before{margin-bottom:4px}
+  td.num:nth-child(5) .r{font-size:24px;padding:4px 10px}
   .grid{grid-template-columns:1fr 1fr;gap:10px}
   .cb{padding:10px 10px 12px;gap:6px}
   .ck{font-size:12.5px}
