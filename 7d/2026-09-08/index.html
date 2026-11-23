@@ -52,6 +52,11 @@ h3{font-size:15px;font-weight:700;margin:0 0 12px;color:var(--ink2)}
 .adv ul{margin:8px 0 0;padding-left:1.1em;font-size:13px;display:flex;flex-direction:column;gap:4px}
 .adv li{word-break:break-word}
 .adv .tip{margin-top:8px;font-size:13px;font-weight:700}
+details.txt{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:0 16px}
+details.txt summary{cursor:pointer;font-weight:700;padding:12px 0;display:flex;justify-content:space-between;gap:8px}
+details.txt summary span{font:12px var(--mono);color:var(--ink2);font-weight:400}
+.tb{white-space:pre-wrap;word-break:break-word;font-size:13.5px;border-top:1px dashed var(--line);padding:10px 0}
+.tb a{color:var(--accent)}
 .sec-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:8px}
 .sec-h .n{font-family:var(--mono);font-size:13px;color:var(--ink2)}
 .charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
@@ -195,6 +200,8 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </section>
 
 
+
+<section aria-labelledby="h-txt" style="display:flex;flex-direction:column;gap:12px"><div class="sec-h"><h2 id="h-txt">文字報告</h2><span class="n">原 LINE 文字訊息｜7 天｜點標題展開</span></div><details class="txt" open><summary>✔︎9/2–9/8（7天）｜ROAS&gt;2的廣告素材（投遞中、花費&gt;5,000，0 支素材／0 個廣告）<span>1 段</span></summary><div class="tb">這段期間沒有花費&gt;5,000 且 ROAS&gt;2 的廣告。總花費 NT$584,693，共 433 支有花費。</div></details><details class="txt"><summary>✘9/2–9/8（7天）｜ROAS&lt;1的廣告素材（投遞中、花費≧1000，0 支素材／0 個廣告，合計 NT$0）<span>1 段</span></summary><div class="tb">沒有投遞中、花費≧1000 且 ROAS&lt;1 的廣告。</div></details><details class="txt"><summary>【14日素材趨勢】前7天 → 近7天 8/26–9/1 → 9/2–9/8（以素材合併、開著、兩段各花費≧2000）<span>4 段</span></summary><div class="tb">📈 效果遞增（0 支）</div><div class="tb">（沒有）</div><div class="tb">📉 效果遞減（0 支）</div><div class="tb">（沒有）</div></details><details class="txt"><summary>【受眾｜廣告組合分析】近7天 9/2–9/8（開著、花費≧1000，0 個，依花費排序）<span>1 段</span></summary><div class="tb">沒有開著且花費≧1000 的廣告組合。</div></details></section>
 
 <section aria-labelledby="h-aud" style="display:flex;flex-direction:column;gap:16px">
   <div class="sec-h"><h2 id="h-aud">受眾分析</h2><span class="n">購買目標的受眾包｜長條長度＝花費、顏色＝ROAS</span></div>
