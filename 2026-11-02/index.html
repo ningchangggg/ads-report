@@ -649,7 +649,8 @@ const dt=v=>new Date(v+"T00:00:00"),md=x=>(x.getMonth()+1)+"/"+x.getDate();
 Promise.all([j("days.json"),j("ranges.json")]).then(([days,ranges])=>{
  const L=MODE=="7d"?ranges:days,path=(m,v)=>ROOT+(m=="7d"?"7d/":"")+v+"/";
  const lab=v=>{const e=dt(v);if(MODE!="7d")return md(e)+"（"+W[e.getDay()]+"）";const s=new Date(e);s.setDate(e.getDate()-6);return md(s)+"–"+md(e)};
- const s=document.getElementById("day");s.innerHTML=L.map(v=>'<option value="'+v+'"'+(v==D?" selected":"")+">"+lab(v)+"</option>").join("");
+ const s=document.getElementById("day");const g={};L.forEach(v=>{const k=v.slice(0,7);(g[k]=g[k]||[]).push(v)});
+ s.innerHTML=Object.keys(g).map(k=>'<optgroup label="'+k.slice(0,4)+" 年 "+(+k.slice(5))+' 月">'+g[k].map(v=>'<option value="'+v+'"'+(v==D?" selected":"")+">"+lab(v)+"</option>").join("")+"</optgroup>").join("");
  s.onchange=()=>{location.href=path(MODE,s.value)};
  const set=(id,v)=>{if(!v)return;const a=document.getElementById(id);a.href=path(MODE,v);a.removeAttribute("aria-disabled");a.title=lab(v)};
  const i=L.indexOf(D);if(i>=0){set("prev",L[i+1]);set("next",L[i-1])}
