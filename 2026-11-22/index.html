@@ -52,6 +52,11 @@ h3{font-size:15px;font-weight:700;margin:0 0 12px;color:var(--ink2)}
 .adv ul{margin:8px 0 0;padding-left:1.1em;font-size:13px;display:flex;flex-direction:column;gap:4px}
 .adv li{word-break:break-word}
 .adv .tip{margin-top:8px;font-size:13px;font-weight:700}
+details.txt{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:0 16px}
+details.txt summary{cursor:pointer;font-weight:700;padding:12px 0;display:flex;justify-content:space-between;gap:8px}
+details.txt summary span{font:12px var(--mono);color:var(--ink2);font-weight:400}
+.tb{white-space:pre-wrap;word-break:break-word;font-size:13.5px;border-top:1px dashed var(--line);padding:10px 0}
+.tb a{color:var(--accent)}
 .sec-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:8px}
 .sec-h .n{font-family:var(--mono);font-size:13px;color:var(--ink2)}
 .charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
@@ -197,6 +202,333 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </section>
 
 <section aria-labelledby="h-adv" style="display:flex;flex-direction:column;gap:16px"><div class="sec-h"><h2 id="h-adv">素材製作建議</h2><span class="n">依品項｜前 7 天 11/9–11/15 → 近 7 天 11/16–11/22｜⚠️ 7 項沒素材・🔻 2 項下降・✅ 2 項健康</span></div><div class="adv-g"><div class="adv none"><div class="h">03星座日曆<span>沒素材在跑</span></div><div class="m">近 14 天都沒投</div><div class="tip">👉 需要製作新素材</div></div><div class="adv none"><div class="h">05花語曆<span>沒素材在跑</span></div><div class="m">近 7 天還花了 NT$4,678、ROAS 0.23，但素材都已暫停</div><div class="tip">👉 需要製作新素材</div></div><div class="adv none"><div class="h">06子想安慰曆<span>沒素材在跑</span></div><div class="m">近 7 天還花了 NT$5,968、ROAS 0.80，但素材都已暫停</div><div class="tip">👉 需要製作新素材</div></div><div class="adv none"><div class="h">07以馬內曆<span>沒素材在跑</span></div><div class="m">近 7 天還花了 NT$23,050、ROAS 1.60，但素材都已暫停</div><div class="tip">👉 需要製作新素材</div></div><div class="adv none"><div class="h">10語錄卡<span>沒素材在跑</span></div><div class="m">近 14 天都沒投</div><div class="tip">👉 需要製作新素材</div></div><div class="adv none"><div class="h">15日日法華<span>沒素材在跑</span></div><div class="m">近 7 天還花了 NT$2,144、ROAS 0.00，但素材都已暫停</div><div class="tip">👉 需要製作新素材</div></div><div class="adv none"><div class="h">16手機版日曆<span>沒素材在跑</span></div><div class="m">前 7 天花了 NT$6,774，近 7 天停了</div><div class="tip">👉 需要製作新素材</div></div><div class="adv down"><div class="h">01煦暖曆<span>下降中</span></div><div class="m">近 7 天 NT$205,714｜ROAS 1.61 → 1.84（+14%）｜在跑素材 2 支</div><div class="m">原因：在跑素材只剩 2 支</div><ul><li>幹話介紹｜📈 遞增 +30%｜NT$65,339、ROAS 2.07 <a href="https://www.facebook.com/104946584515578/posts/1420443200241429" target="_blank" rel="noopener">貼文 ↗</a></li><li>煦暖曆介紹｜—｜NT$43,759、ROAS 2.38 <a href="https://www.facebook.com/104946584515578/posts/1420443210241428" target="_blank" rel="noopener">貼文 ↗</a></li></ul><div class="tip">👉 準備 1–2 支新素材替補</div></div><div class="adv down"><div class="h">02旅行機票日曆<span>下降中</span></div><div class="m">近 7 天 NT$202,264｜ROAS 1.25 → 1.47（+18%）｜在跑素材 3 支</div><div class="m">原因：主力素材有 1 支走弱</div><ul><li>Julie_機票旅行｜💡 疑似疲乏｜NT$4,742、ROAS 3.84 <a href="https://www.facebook.com/104946584515578/posts/1445414544410961" target="_blank" rel="noopener">貼文 ↗</a></li></ul><div class="tip">👉 準備 1–2 支新素材替補，優先換掉疲乏的主力素材</div></div><div class="adv ok"><div class="h">04幹話曆<span>健康</span></div><div class="m">近 7 天 NT$521,433｜ROAS 1.54 → 1.80（+17%）｜在跑素材 7 支</div></div><div class="adv ok"><div class="h">14手帳(煦暖曆)<span>健康</span></div><div class="m">近 7 天 NT$333,472｜ROAS 1.22 → 1.57（+29%）｜在跑素材 9 支</div></div></div></section>
+
+<section aria-labelledby="h-txt" style="display:flex;flex-direction:column;gap:12px"><div class="sec-h"><h2 id="h-txt">文字報告</h2><span class="n">原 LINE 文字訊息｜單日｜點標題展開</span></div><details class="txt" open><summary>✔︎11/22｜ROAS&gt;2的廣告素材（投遞中、花費&gt;1,000，11 支素材／15 個廣告）<span>11 段</span></summary><div class="tb">手帳_11月素材_第四款.gif - 複本
+★投遞狀態：進行中
+★花費金額：NT$5,964
+★ROAS：6.34
+★結果值：NT$37,834
+★成果：13購買
+★每次成果成本：NT$459
+
+★所屬廣告組合名：Literature (publications)
+★所屬行銷活動名：手帳排除
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1447000030919079" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1447000030919079</a></div><div class="tb">103
+★投遞狀態：進行中
+★花費金額：NT$6,603
+★ROAS：4.05
+★結果值：NT$26,733
+★成果：14購買
+★每次成果成本：NT$472
+
+★所屬廣告組合名：九月幹話厭世語錄日曆0902 -幽默 (喜劇) - 複本
+★所屬行銷活動名：新十月幹話
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1406179858334430" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1406179858334430</a>
+💡 疑似疲乏（前7天→近7天）｜頻率 1.4 → 2.1、點擊率 2.46% → 1.37%</div><div class="tb">Julie_機票旅行 - 複本 - 複本
+★投遞狀態：進行中
+★花費金額：NT$1,886
+★ROAS：4.04
+★結果值：NT$7,620
+★成果：4購買
+★每次成果成本：NT$472
+
+★所屬廣告組合名：曾和任何貼文或廣告有互動的用戶ins - 複本
+★所屬行銷活動名：11月旅行
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1445414544410961" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1445414544410961</a></div><div class="tb">大Ｃ手帳
+★合計花費金額：NT$2,881
+★ROAS：3.56
+★結果值：NT$10,267
+★成果：8購買
+★每次成果成本：NT$360
+
+出現在 2 個受眾（依素材名合併，請點連結確認）：
+├ ig 365互動貼文 - 複本 - 複本｜進行中｜NT$1,527｜ROAS 2.66｜2購買
+│ <a href="https://www.facebook.com/104946584515578/posts/1448922824060133" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1448922824060133</a>
+└ 曾和任何貼文或廣告有互動的用戶ins｜進行中｜NT$1,354｜ROAS 4.58｜6購買
+   <a href="https://www.facebook.com/104946584515578/posts/1448922670726815" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1448922670726815</a></div><div class="tb">2027 幹話日曆 1 9：16.png
+★合計花費金額：NT$8,761
+★ROAS：2.96
+★結果值：NT$25,948
+★成果：14購買
+★每次成果成本：NT$626
+
+出現在 2 個受眾（依素材名合併，請點連結確認）：
+├ ai 新客人｜進行中｜NT$7,260｜ROAS 2.91｜11購買
+│ <a href="https://www.facebook.com/104946584515578/posts/1413537120932037" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1413537120932037</a>
+└ 0826_超早鳥即將結束-穩定交往中｜進行中｜NT$1,501｜ROAS 3.22｜3購買
+   <a href="https://www.facebook.com/104946584515578/posts/1371762078442875" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1371762078442875</a></div><div class="tb">手帳_11月素材_第三款.gif＋KOC_林禹岑_手帳v2__2027手帳.mp4綜合 - 複本
+★投遞狀態：進行中
+★花費金額：NT$4,773
+★ROAS：2.91
+★結果值：NT$13,891
+★成果：15購買
+★每次成果成本：NT$318
+
+★所屬廣告組合名：氣味
+★所屬行銷活動名：手帳排除
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1447000144252401" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1447000144252401</a></div><div class="tb">煦暖曆介紹 - 複本
+★投遞狀態：進行中
+★花費金額：NT$10,999
+★ROAS：2.81
+★結果值：NT$30,930
+★成果：19購買
+★每次成果成本：NT$579
+
+★所屬廣告組合名：0826_超早鳥即將結束煦暖曆-生活品質（心理學） - 複本 - 複本
+★所屬行銷活動名：新受眾
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1420443210241428" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1420443210241428</a></div><div class="tb">1115手帳_阿寧開箱.MOV
+★合計花費金額：NT$8,465
+★ROAS：2.69
+★結果值：NT$22,790
+★成果：19購買
+★每次成果成本：NT$446
+
+出現在 2 個受眾（依素材名合併，請點連結確認）：
+├ Instagram（社群媒體）｜進行中｜NT$5,164｜ROAS 3.05｜12購買
+│ <a href="https://www.facebook.com/104946584515578/posts/1446417770977305" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1446417770977305</a>
+└ ai 新客人 - 複本 - 複本 - 複本｜進行中｜NT$3,301｜ROAS 2.14｜7購買
+   <a href="https://www.facebook.com/104946584515578/posts/1446417770977305" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1446417770977305</a></div><div class="tb">1115手帳_寫得下去的手帳.MOV - 複本
+★投遞狀態：進行中
+★花費金額：NT$1,027
+★ROAS：2.63
+★結果值：NT$2,699
+★成果：2購買
+★每次成果成本：NT$514
+
+★所屬廣告組合名：Instagram（社群媒體）
+★所屬行銷活動名：20251125新素材手帳
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1446417740977308" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1446417740977308</a></div><div class="tb">11.18_大C煦暖手帳A_字幕特效64秒_v5_免運bar.mp4
+★合計花費金額：NT$1,706
+★ROAS：2.23
+★結果值：NT$3,812
+★成果：3購買
+★每次成果成本：NT$569
+
+出現在 2 個受眾（依素材名合併，請點連結確認）：
+├ 曾和任何貼文或廣告有互動的用戶ins｜進行中｜NT$1,295｜ROAS 2.25｜2購買
+│ <a href="https://www.facebook.com/104946584515578/posts/1448922834060132" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1448922834060132</a>
+└ 影片觀看95%｜進行中｜NT$411｜ROAS 2.18｜1購買
+   <a href="https://www.facebook.com/104946584515578/posts/1448922834060132" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1448922834060132</a></div><div class="tb">0826_超早鳥即將結束-幹話日曆4x5
+★投遞狀態：進行中
+★花費金額：NT$10,902
+★ROAS：2.17
+★結果值：NT$23,676
+★成果：17購買
+★每次成果成本：NT$641
+
+★所屬廣告組合名：0826_超早鳥即將結束-幹話日曆幽默 (喜劇) - 複本
+★所屬行銷活動名：綜合成效優質
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1371761991776217" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1371761991776217</a></div></details><details class="txt"><summary>✘11/22｜ROAS&lt;1的廣告素材（投遞中、花費≧1000，1 支素材／1 個廣告，合計 NT$2,012）<span>1 段</span></summary><div class="tb">手帳_暗色時尚GIF_v4.gif - 複本
+★投遞狀態：進行中
+★花費金額：NT$2,012
+★ROAS：0.00
+★結果值：NT$0
+★成果：0購買
+★每次成果成本：—（沒有購買）
+
+★所屬廣告組合名：Literature (publications)
+★所屬行銷活動名：手帳排除
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1446999987585750" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1446999987585750</a></div></details><details class="txt"><summary>【14日素材趨勢】前7天 → 近7天 11/9–11/15 → 11/16–11/22（以素材合併、開著、兩段各花費≧2000）<span>13 段</span></summary><div class="tb">📈 效果遞增（4 支）</div><div class="tb">103
+★上線：10/2（到 11/22 第 52 天）
+★ROAS：1.30 → 2.62（+102%）
+★每次成果成本：NT$847 → NT$746
+★近7天花費：NT$35,049｜成果 47購買
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1406179858334430" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1406179858334430</a></div><div class="tb">幹話介紹（5 個廣告合計，連結為花費最高那個）
+★上線：10/11（到 11/22 第 43 天）
+★ROAS：1.32 → 2.00（+52%）
+★每次成果成本：NT$1,207 → NT$721
+★近7天花費：NT$72,090｜成果 100購買
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1420443200241429" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1420443200241429</a></div><div class="tb">2027 幹話日曆 1 9：16.png（3 個廣告合計，連結為花費最高那個）
+★上線：8/26（到 11/22 第 89 天）
+★ROAS：1.41 → 2.01（+42%）
+★每次成果成本：NT$1,112 → NT$786
+★近7天花費：NT$52,674｜成果 67購買
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1413537120932037" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1413537120932037</a></div><div class="tb">手帳_11月素材_第四款.gif（8 個廣告合計，連結為花費最高那個）
+★上線：11/12（到 11/22 第 11 天）
+★ROAS：1.12 → 1.53（+36%）
+★每次成果成本：NT$1,188 → NT$967
+★近7天花費：NT$83,174｜成果 86購買
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1447000030919079" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1447000030919079</a></div><div class="tb">📉 效果遞減（1 支）</div><div class="tb">Julie_機票旅行（5 個廣告合計，連結為花費最高那個）
+★上線：11/5（到 11/22 第 18 天）
+★ROAS：3.89 → 2.07（-47%）
+★每次成果成本：NT$670 → NT$764
+★近7天花費：NT$12,216｜成果 16購買
+★頻率：1.3 → 1.6
+★點擊率：1.04% → 0.85%
+★CPM：NT$430 → NT$202
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1435618845390531" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1435618845390531</a></div><div class="tb">🆕 新上線（不滿14天，5 支）</div><div class="tb">1115手帳_阿寧開箱.MOV（6 個廣告合計，連結為花費最高那個）
+★上線：11/15（到 11/22 第 8 天）
+★近7天 ROAS：2.40｜每次成果成本：NT$528
+★近7天花費：NT$33,236｜成果 63購買
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1446417770977305" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1446417770977305</a></div><div class="tb">大Ｃ手帳（4 個廣告合計，連結為花費最高那個）
+★上線：11/18（到 11/22 第 5 天）
+★近7天 ROAS：1.99｜每次成果成本：NT$644
+★近7天花費：NT$31,555｜成果 49購買
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1448922670726815" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1448922670726815</a></div><div class="tb">1115手帳_寫得下去的手帳.MOV（6 個廣告合計，連結為花費最高那個）
+★上線：11/15（到 11/22 第 8 天）
+★近7天 ROAS：1.73｜每次成果成本：NT$701
+★近7天花費：NT$39,941｜成果 57購買
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1446417740977308" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1446417740977308</a></div><div class="tb">手帳_暗色時尚GIF_v4.gif（6 個廣告合計，連結為花費最高那個）
+★上線：11/12（到 11/22 第 11 天）
+★近7天 ROAS：1.71｜每次成果成本：NT$784
+★近7天花費：NT$3,918｜成果 5購買
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1446999987585750" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1446999987585750</a></div><div class="tb">11.18_大C煦暖手帳A_字幕特效64秒_v5_免運bar.mp4（4 個廣告合計，連結為花費最高那個）
+★上線：11/18（到 11/22 第 5 天）
+★近7天 ROAS：1.50｜每次成果成本：NT$805
+★近7天花費：NT$7,248｜成果 9購買
+★貼文連結：<a href="https://www.facebook.com/104946584515578/posts/1448922834060132" target="_blank" rel="noopener">https://www.facebook.com/104946584515578/posts/1448922834060132</a></div></details><details class="txt"><summary>【受眾｜廣告組合分析】近7天 11/16–11/22（開著、花費≧1000，19 個，依花費排序）<span>19 段</span></summary><div class="tb">影片觀看95% - 複本 - 複本 - 複本 - 複本
+★投遞狀態：進行中
+★花費金額：NT$101,002
+★ROAS：1.70
+★結果值：NT$172,090
+★成果：117購買
+★每次成果成本：NT$863
+
+★所屬行銷活動名：10/21新幹話 類似受眾</div><div class="tb">0826_超早鳥即將結束煦暖曆-近期壽星
+★投遞狀態：進行中
+★花費金額：NT$65,387
+★ROAS：2.07
+★結果值：NT$135,209
+★成果：93購買
+★每次成果成本：NT$703
+
+★所屬行銷活動名：新受眾</div><div class="tb">新客人 -近期壽星
+★投遞狀態：進行中
+★花費金額：NT$59,926
+★ROAS：1.52
+★結果值：NT$91,155
+★成果：53購買
+★每次成果成本：NT$1,131
+
+★所屬行銷活動名：新素材新受眾new target</div><div class="tb">0826_超早鳥即將結束-幹話日曆幽默 (喜劇) - 複本
+★投遞狀態：進行中
+★花費金額：NT$55,274
+★ROAS：1.96
+★結果值：NT$108,321
+★成果：77購買
+★每次成果成本：NT$718
+
+★所屬行銷活動名：綜合成效優質</div><div class="tb">九月幹話厭世語錄日曆0902 -幽默 (喜劇) - 複本
+★投遞狀態：進行中
+★花費金額：NT$49,922
+★ROAS：2.35
+★結果值：NT$117,235
+★成果：65購買
+★每次成果成本：NT$768
+
+★所屬行銷活動名：新十月幹話</div><div class="tb">ai 新客人
+★投遞狀態：進行中
+★花費金額：NT$47,787
+★ROAS：2.03
+★結果值：NT$97,145
+★成果：60購買
+★每次成果成本：NT$796
+
+★所屬行銷活動名：新素材新受眾new target</div><div class="tb">0826_超早鳥即將結束煦暖曆-生活品質（心理學） - 複本 - 複本
+★投遞狀態：進行中
+★花費金額：NT$43,761
+★ROAS：2.38
+★結果值：NT$104,015
+★成果：55購買
+★每次成果成本：NT$796
+
+★所屬行銷活動名：新受眾</div><div class="tb">ai 新客人 - 複本 - 複本 - 複本 - 複本
+★投遞狀態：進行中
+★花費金額：NT$37,259
+★ROAS：2.06
+★結果值：NT$76,618
+★成果：50購買
+★每次成果成本：NT$745
+
+★所屬行銷活動名：10/21新幹話 類似受眾</div><div class="tb">Hotels (lodging)
+★投遞狀態：進行中
+★花費金額：NT$34,838
+★ROAS：1.85
+★結果值：NT$64,474
+★成果：43購買
+★每次成果成本：NT$810
+
+★所屬行銷活動名：11月旅行</div><div class="tb">Literature (publications)
+★投遞狀態：進行中
+★花費金額：NT$34,692
+★ROAS：2.15
+★結果值：NT$74,574
+★成果：39購買
+★每次成果成本：NT$890
+
+★所屬行銷活動名：手帳排除</div><div class="tb">曾和任何貼文或廣告有互動的用戶ins - 複本
+★投遞狀態：進行中
+★花費金額：NT$31,529
+★ROAS：2.14
+★結果值：NT$67,360
+★成果：36購買
+★每次成果成本：NT$876
+
+★所屬行銷活動名：11月旅行</div><div class="tb">Instagram（社群媒體）
+★投遞狀態：進行中
+★花費金額：NT$28,535
+★ROAS：2.55
+★結果值：NT$72,873
+★成果：54購買
+★每次成果成本：NT$528
+
+★所屬行銷活動名：20251125新素材手帳</div><div class="tb">ai 新客人 - 複本 - 複本 - 複本
+★投遞狀態：進行中
+★花費金額：NT$27,321
+★ROAS：2.12
+★結果值：NT$58,042
+★成果：51購買
+★每次成果成本：NT$536
+
+★所屬行銷活動名：20251125新素材手帳</div><div class="tb">氣味
+★投遞狀態：進行中
+★花費金額：NT$25,121
+★ROAS：1.53
+★結果值：NT$38,515
+★成果：35購買
+★每次成果成本：NT$718
+
+★所屬行銷活動名：手帳排除</div><div class="tb">煦暖曆IG互動7D~1Y
+★投遞狀態：進行中
+★花費金額：NT$13,250
+★ROAS：1.67
+★結果值：NT$22,181
+★成果：19購買
+★每次成果成本：NT$697
+
+★所屬行銷活動名：大Ｃ手帳</div><div class="tb">曾和任何貼文或廣告有互動的用戶ins
+★投遞狀態：進行中
+★花費金額：NT$10,500
+★ROAS：2.26
+★結果值：NT$23,718
+★成果：20購買
+★每次成果成本：NT$525
+
+★所屬行銷活動名：大Ｃ手帳</div><div class="tb">影片觀看95%
+★投遞狀態：進行中
+★花費金額：NT$9,484
+★ROAS：2.05
+★結果值：NT$19,401
+★成果：14購買
+★每次成果成本：NT$677
+
+★所屬行銷活動名：大Ｃ手帳</div><div class="tb">ig 365互動貼文 - 複本 - 複本
+★投遞狀態：進行中
+★花費金額：NT$5,569
+★ROAS：1.51
+★結果值：NT$8,391
+★成果：5購買
+★每次成果成本：NT$1,114
+
+★所屬行銷活動名：大Ｃ手帳</div><div class="tb">0826_超早鳥即將結束-穩定交往中
+★投遞狀態：進行中
+★花費金額：NT$4,743
+★ROAS：1.80
+★結果值：NT$8,515
+★成果：7購買
+★每次成果成本：NT$678
+
+★所屬行銷活動名：綜合成效優質</div></details></section>
 
 <section aria-labelledby="h-aud" style="display:flex;flex-direction:column;gap:16px">
   <div class="sec-h"><h2 id="h-aud">受眾分析</h2><span class="n">購買目標的受眾包｜長條長度＝花費、顏色＝ROAS</span></div>

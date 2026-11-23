@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>9/7–9/13 受眾素材分析</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: 代理商週報式長頁——摘要數字 → 結論 → 受眾（圖表＋設定表）→ 素材（貼文圖卡片牆） */
+:root{
+  --bg:#f5f6f8; --paper:#ffffff; --ink:#18212e; --ink2:#4a5566; --line:#dde2ea; --soft:#eef1f5;
+  --accent:#1f5f8b; --good:#1f8a57; --mid:#b7791f; --bad:#c53b3b; --na:#8a94a3;
+  --good-bg:#e3f4ea; --mid-bg:#fbf1dd; --bad-bg:#fbe5e3; --na-bg:#eef0f3;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f141b; --paper:#161d27; --ink:#e7ecf2; --ink2:#a3aebd; --line:#2a3443; --soft:#1d2633;
+  --accent:#6fb0dc; --good:#4cc38a; --mid:#e0a64a; --bad:#ef6d6d; --na:#7d8796;
+  --good-bg:#16352a; --mid-bg:#3a2f18; --bad-bg:#3d1f22; --na-bg:#232c38; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f141b; --paper:#161d27; --ink:#e7ecf2; --ink2:#a3aebd; --line:#2a3443; --soft:#1d2633;
+  --accent:#6fb0dc; --good:#4cc38a; --mid:#e0a64a; --bad:#ef6d6d; --na:#7d8796;
+  --good-bg:#16352a; --mid-bg:#3a2f18; --bad-bg:#3d1f22; --na-bg:#232c38; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px}
+.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--accent);text-transform:uppercase}
+h1{font-size:clamp(26px,4vw,38px);font-weight:900;margin:6px 0 4px;text-wrap:balance;letter-spacing:.01em}
+h2{font-size:22px;font-weight:900;margin:0;text-wrap:balance}
+h3{font-size:15px;font-weight:700;margin:0 0 12px;color:var(--ink2)}
+.src{color:var(--ink2);font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.kpi{background:var(--paper);padding:16px 18px}
+.kpi .l{font-size:12px;color:var(--ink2)}
+.kpi .v{font-family:var(--mono);font-size:24px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:2px}
+.kpi .s{font-size:12px;color:var(--ink2)}
+.find{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+.find ol{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:10px}
+.find li{max-width:78ch}
+.find b{color:var(--ink)}
+.adv-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.adv{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--na);border-radius:10px;padding:14px 16px;min-width:0}
+.adv.none{border-left-color:var(--bad)}.adv.down{border-left-color:var(--mid)}.adv.ok{border-left-color:var(--good)}
+.adv .h{display:flex;justify-content:space-between;gap:8px;align-items:baseline;font-weight:700}
+.adv .h span{font-family:var(--mono);font-size:12px;font-weight:600;padding:1px 8px;border-radius:999px}
+.adv.none .h span{background:var(--bad-bg);color:var(--bad)}.adv.down .h span{background:var(--mid-bg);color:var(--mid)}.adv.ok .h span{background:var(--good-bg);color:var(--good)}
+.adv .m{font-size:13px;color:var(--ink2);margin-top:4px;font-variant-numeric:tabular-nums}
+.adv ul{margin:8px 0 0;padding-left:1.1em;font-size:13px;display:flex;flex-direction:column;gap:4px}
+.adv li{word-break:break-word}
+.adv .tip{margin-top:8px;font-size:13px;font-weight:700}
+.sec-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:8px}
+.sec-h .n{font-family:var(--mono);font-size:13px;color:var(--ink2)}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:18px;min-width:0}
+.hb{display:grid;grid-template-columns:92px 1fr auto;align-items:center;gap:10px;padding:6px 0}
+.hb-l{font-size:13px}
+.hb-t{height:14px;background:var(--soft);border-radius:3px;overflow:hidden}
+.hb-f{height:100%;border-radius:3px}
+.hb-f.good{background:var(--good)}.hb-f.mid{background:var(--mid)}.hb-f.bad{background:var(--bad)}.hb-f.na{background:var(--na)}
+.hb-v{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.hb-v span{display:block;font-family:var(--sans);font-size:11px;color:var(--ink2)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink2);margin-top:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.tbl{overflow-x:auto;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:920px}
+th{font-size:12px;font-weight:700;color:var(--ink2);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--paper)}
+th.num,td.num{text-align:right}
+td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:13px}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.off td{opacity:.62}
+.nm{width:28%}.set{width:40%}
+.an{font-weight:700;font-size:14px;word-break:break-word}
+.sub{font-size:12px;color:var(--ink2);margin-top:4px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.set>div{margin-bottom:4px}.set b{font-weight:500;color:var(--ink2);margin-right:4px}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.chip{font-size:11.5px;word-break:break-word;padding:2px 8px;border-radius:999px;background:var(--soft);border:1px solid var(--line)}
+.chip.ca{border-color:var(--accent);color:var(--accent)}
+.chip.ex{border-style:dashed;color:var(--ink2)}
+.adv{font-size:11px;padding:1px 6px;border-radius:4px;background:var(--mid-bg);color:var(--mid);margin-left:4px}
+.muted{color:var(--ink2);font-size:12px}
+.flag{margin-top:6px;font-size:12px;color:var(--bad);background:var(--bad-bg);padding:4px 8px;border-radius:6px}
+.st{font-size:11px;font-weight:700;padding:1px 7px;border-radius:4px}
+.st.on{background:var(--good-bg);color:var(--good)}.st.off{background:var(--na-bg);color:var(--na)}
+.tag{font-size:11px;padding:1px 7px;border-radius:4px;border:1px solid var(--line)}
+.r{font-weight:600;padding:1px 6px;border-radius:4px}
+.r.good{background:var(--good-bg);color:var(--good)}.r.mid{background:var(--mid-bg);color:var(--mid)}
+.r.bad{background:var(--bad-bg);color:var(--bad)}.r.na{background:var(--na-bg);color:var(--na)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.cr{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.cr.off{opacity:.7}
+.ph{position:relative;aspect-ratio:1/1;max-width:100%;background:var(--soft)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph .st{position:absolute;top:8px;left:8px}
+.ph .r.big{position:absolute;right:8px;bottom:8px;font-family:var(--mono);font-size:13px;padding:3px 8px;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.cb{padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pd{font-size:11.5px;color:var(--accent);font-weight:500}
+.tr{font-size:12px;font-weight:700;padding:3px 8px;border-radius:6px;align-self:flex-start;background:var(--na-bg);color:var(--na)}
+.tr.up{background:var(--good-bg);color:var(--good)}.tr.down{background:var(--bad-bg);color:var(--bad)}.tr.new{background:var(--mid-bg);color:var(--mid)}
+.ck{font-size:13px;font-weight:700;word-break:break-word;line-height:1.4}
+dl{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;margin:0}
+dl div{min-width:0}
+dt{font-size:11px;color:var(--ink2)}
+dd{margin:0;font-family:var(--mono);font-size:13.5px;font-variant-numeric:tabular-nums}
+.cf{margin-top:auto;font-size:12px;color:var(--ink2);display:flex;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:8px}
+.cf a{color:var(--accent);text-decoration:none;font-weight:500}
+.cf a:hover,.cf a:focus-visible{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.note{font-size:12.5px;color:var(--ink2);max-width:80ch}
+/* 手機版：受眾表改成卡片、長條圖改上下排、KPI 兩欄 */
+@media (max-width:720px){
+  body{font-size:14.5px;padding-block:18px 48px}
+  .wrap{gap:28px}
+  .kpis{grid-template-columns:1fr 1fr}
+  .kpi{padding:12px 14px}.kpi:first-child{grid-column:1/-1}
+  .kpi .v{font-size:clamp(15px,4.5vw,20px)}
+  .find{padding:16px 16px 16px 14px}.find ol{gap:12px}
+  .panel{padding:14px}
+  .hb{grid-template-columns:1fr auto;grid-template-areas:"l v" "t t";gap:4px 10px;padding:8px 0}
+  .hb-l{grid-area:l;font-weight:500}.hb-v{grid-area:v}.hb-t{grid-area:t;height:10px}
+  .hb-v span{display:inline;margin-left:6px}
+  .tbl{background:none;border:0;border-radius:0;overflow:visible}
+  table{min-width:0}
+  thead{display:none}
+  table,tbody,tr,td{display:block}
+  tr{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 8px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:10px}
+  tr.off{opacity:.7}tr.off td{opacity:1}
+  td{padding:0;border:0}
+  td.nm,td.set{grid-column:1/-1;width:auto}
+  td.set{background:var(--soft);border-radius:8px;padding:10px 12px}
+  td.num{text-align:left;font-size:14px;white-space:normal}
+  td.num::before{content:attr(data-l);display:block;font-family:var(--sans);font-size:11px;color:var(--ink2)}
+  td.num:nth-child(5){grid-row:span 2;display:flex;flex-direction:column;justify-content:center;align-items:center;background:var(--soft);border-radius:8px;padding:8px 4px}
+  td.num:nth-child(5)::before{margin-bottom:4px}
+  td.num:nth-child(5) .r{font-size:24px;padding:4px 10px}
+  .grid{grid-template-columns:1fr 1fr;gap:10px}
+  .cb{padding:10px 10px 12px;gap:6px}
+  .ck{font-size:12.5px}
+  dl{grid-template-columns:1fr;gap:4px}
+  dd{font-size:13px}
+  .cf{flex-wrap:wrap;gap:4px 8px}
+  .ph .r.big{font-size:12px;padding:2px 6px}
+}
+@media (max-width:340px){.grid{grid-template-columns:1fr}}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:14px;margin-bottom:-22px;position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0}
+.nav a,.nav select{color:var(--accent);text-decoration:none;font:inherit;font-weight:700;border:1px solid var(--line);border-radius:999px;background:var(--paper);min-height:40px;display:inline-flex;align-items:center}
+.nav .home{padding:0 14px}
+.nav{flex-wrap:wrap}
+.mode{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:var(--paper);padding:3px;gap:2px}
+.nav .mode a{border:0;min-height:34px;padding:0 14px;border-radius:999px;color:var(--ink2)}
+.nav .mode a.on{background:var(--accent);color:#fff}
+.pick{display:flex;align-items:center;gap:6px;flex:1 1 100%;justify-content:center}
+.pick label{flex:1;max-width:260px}.pick select{width:100%;justify-content:center;text-align:center;text-align-last:center}
+.arw{width:40px;justify-content:center;font-size:20px}
+.arw[aria-disabled="true"]{opacity:.3;pointer-events:none}
+.nav select{padding:0 30px 0 14px;appearance:none;-webkit-appearance:none;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,var(--accent) 50%),linear-gradient(135deg,var(--accent) 50%,transparent 50%);background-position:calc(100% - 16px) 50%,calc(100% - 11px) 50%;background-size:5px 5px;background-repeat:no-repeat;font-family:var(--mono)}
+.nav a:focus-visible,.nav select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<nav class="nav" aria-label="日期切換">
+    <a class="home" href="../../">⌂ 回首頁</a>
+    <div class="mode" role="group" aria-label="報告區間"><a id="m-day" href="#">單日</a><a id="m-7d" href="#">7 天</a></div>
+    <div class="pick"><a id="prev" class="arw" href="#" aria-disabled="true" aria-label="前一天">‹</a>
+      <label class="sel"><span class="sr">選擇日期</span><select id="day" aria-label="選擇日期"><option value="2026-09-13">9/7–9/13</option></select></label>
+      <a id="next" class="arw" href="#" aria-disabled="true" aria-label="後一天">›</a></div>
+  </nav>
+<header>
+  <div class="eyebrow">Meta Ads · 中文日曆（暖風煦煦）· 2026/09/07–09/13（7 天）</div>
+  <h1>受眾與素材分析報告</h1>
+  <div class="src">資料：Meta 廣告 API（本機唯讀擷取，2026/11/23）｜期間：9/7–9/13 共 7 天｜購買數與營收依 Meta 歸因設定｜素材圖片取自每支素材花費最高那則廣告的貼文</div>
+</header>
+
+<section class="kpis" aria-label="摘要數字">
+  <div class="kpi"><div class="l">總花費</div><div class="v">NT$701,129</div><div class="s">132 個受眾包、105 支素材</div></div>
+  <div class="kpi"><div class="l">購買目標花費</div><div class="v">NT$701,129</div><div class="s">其餘為點擊／瀏覽目標</div></div>
+  <div class="kpi"><div class="l">購買營收</div><div class="v">NT$1,809,437</div><div class="s">1155 筆購買</div></div>
+  <div class="kpi"><div class="l">ROAS</div><div class="v">2.58</div><div class="s">購買目標</div></div>
+  <div class="kpi"><div class="l">每次購買成本</div><div class="v">NT$607</div><div class="s">購買目標</div></div>
+</section>
+
+<section class="find" aria-label="重點結論">
+  <h2 style="margin-bottom:12px">重點結論</h2>
+  <ol><li><b>興趣型受眾效率最好，再行銷最弱。</b>興趣 50 包花 NT$326,249、ROAS 3.03；廣泛 3 包花 NT$24,755、ROAS 2.24；再行銷 79 包花 NT$350,125、ROAS 2.18。</li>
+<li><b>最會賣的受眾包：</b>「0826_超早鳥即將結束-幹話日曆幽默 (喜劇) - 複本」3.70、「0826_超早鳥即將結束-穩定交往中」2.69。</li>
+<li><b>年齡：</b>25-34、35-44、45-54 歲佔購買花費 90%，ROAS 25-34 2.75、35-44 2.73、45-54 2.32。</li>
+<li><b>性別：</b>女性佔 81% 花費、ROAS 2.62；男性佔 18% 花費、ROAS 2.39。</li>
+<li><b>128 / 132 個受眾包開著 Advantage+ 受眾</b>，年齡與興趣只是建議值，系統會往外找人。</li>
+<li><b>素材：</b>表現最好：「0826_超早鳥即將結束-幹話日曆4x5」3.15；花最多的「幹話厭世語錄日曆 華納4:5」花 NT$54,353、ROAS 3.13。</li></ol>
+</section>
+
+
+
+<section aria-labelledby="h-aud" style="display:flex;flex-direction:column;gap:16px">
+  <div class="sec-h"><h2 id="h-aud">受眾分析</h2><span class="n">購買目標的受眾包｜長條長度＝花費、顏色＝ROAS</span></div>
+  <div class="charts">
+    <div class="panel"><h3>受眾類型</h3><div class="hb"><div class="hb-l">興趣（50 包）</div><div class="hb-t"><div class="hb-f good" style="width:93.2%"></div></div><div class="hb-v">NT$326,249<span>ROAS 3.03｜609 購買</span></div></div>
+<div class="hb"><div class="hb-l">廣泛（3 包）</div><div class="hb-t"><div class="hb-f good" style="width:7.1%"></div></div><div class="hb-v">NT$24,755<span>ROAS 2.24｜35 購買</span></div></div>
+<div class="hb"><div class="hb-l">再行銷（79 包）</div><div class="hb-t"><div class="hb-f good" style="width:100.0%"></div></div><div class="hb-v">NT$350,125<span>ROAS 2.18｜511 購買</span></div></div></div>
+    <div class="panel"><h3>年齡層（實際成效）</h3><div class="hb"><div class="hb-l">18-24</div><div class="hb-t"><div class="hb-f mid" style="width:11.5%"></div></div><div class="hb-v">NT$29,612<span>ROAS 1.33｜34 購買</span></div></div>
+<div class="hb"><div class="hb-l">25-34</div><div class="hb-t"><div class="hb-f good" style="width:100.0%"></div></div><div class="hb-v">NT$257,477<span>ROAS 2.75｜466 購買</span></div></div>
+<div class="hb"><div class="hb-l">35-44</div><div class="hb-t"><div class="hb-f good" style="width:99.5%"></div></div><div class="hb-v">NT$256,298<span>ROAS 2.73｜430 購買</span></div></div>
+<div class="hb"><div class="hb-l">45-54</div><div class="hb-t"><div class="hb-f good" style="width:45.5%"></div></div><div class="hb-v">NT$117,097<span>ROAS 2.32｜170 購買</span></div></div>
+<div class="hb"><div class="hb-l">55-64</div><div class="hb-t"><div class="hb-f good" style="width:12.4%"></div></div><div class="hb-v">NT$31,893<span>ROAS 2.21｜43 購買</span></div></div>
+<div class="hb"><div class="hb-l">65+</div><div class="hb-t"><div class="hb-f mid" style="width:3.4%"></div></div><div class="hb-v">NT$8,748<span>ROAS 1.74｜9 購買</span></div></div>
+<div class="hb"><div class="hb-l">未知</div><div class="hb-t"><div class="hb-f na" style="width:0.0%"></div></div><div class="hb-v">NT$4<span>ROAS 1278.25｜3 購買</span></div></div></div>
+    <div class="panel"><h3>性別（實際成效）</h3><div class="hb"><div class="hb-l">女性</div><div class="hb-t"><div class="hb-f good" style="width:100.0%"></div></div><div class="hb-v">NT$566,401<span>ROAS 2.62｜938 購買</span></div></div>
+<div class="hb"><div class="hb-l">男性</div><div class="hb-t"><div class="hb-f good" style="width:22.8%"></div></div><div class="hb-v">NT$129,381<span>ROAS 2.39｜207 購買</span></div></div>
+<div class="hb"><div class="hb-l">未知</div><div class="hb-t"><div class="hb-f good" style="width:0.9%"></div></div><div class="hb-v">NT$5,347<span>ROAS 3.05｜10 購買</span></div></div>
+      <div class="legend"><span><i style="background:var(--good)"></i>ROAS ≥ 2</span><span><i style="background:var(--mid)"></i>1–2</span><span><i style="background:var(--bad)"></i>&lt; 1</span><span><i style="background:var(--na)"></i>花費 &lt; 500 不評</span></div></div>
+  </div>
+  <h3 style="margin:8px 0 0">各受眾包設定與成效（依花費排序）</h3>
+  <p class="note">年齡是受眾包的設定值；有「Advantage+ 建議值」標籤的，系統可以超出這個範圍投放。藍框是包含的自訂受眾，虛線是排除的受眾。灰色列是目前已暫停、但 9/7–9/13 期間仍有花費的受眾包。</p>
+  <div class="tbl"><table>
+    <thead><tr><th>受眾包</th><th>年齡／性別／興趣設定</th><th class="num">花費</th><th class="num">購買</th><th class="num">ROAS</th><th class="num">每次購買成本</th><th class="num">點擊率</th></tr></thead>
+    <tbody><tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 煦暖曆手帳 類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單 - 複本</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單</span><span class="chip ca">煦暖曆FB互動7D-1Y</span><span class="chip ca">v</span><span class="chip ca">ig 365互動貼文</span><span class="chip ca">類似廣告受眾 (3% to 4%) - ig 365互動貼文</span><span class="chip ca">曾和任何貼文或廣告有互動的用戶ins</span></div></td>
+<td class="num" data-l="花費">NT$23,885</td><td class="num" data-l="購買">39</td><td class="num" data-l="ROAS"><span class="r good">2.41</span></td><td class="num" data-l="每次購買成本">NT$612</td><td class="num" data-l="點擊率">2.19%</td></tr>
+<tr class="off"><td class="nm"><div class="an">幹話厭世語錄日曆 Instagram（社群媒體）</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">Instagram（社群媒體）</span><span class="chip">迷因和社群媒體貼文分享論壇 (網站)</span></div></td>
+<td class="num" data-l="花費">NT$23,865</td><td class="num" data-l="購買">29</td><td class="num" data-l="ROAS"><span class="r good">2.17</span></td><td class="num" data-l="每次購買成本">NT$823</td><td class="num" data-l="點擊率">1.06%</td></tr>
+<tr class="off"><td class="nm"><div class="an">九月幹話厭世語錄日曆0902 Instagram（社群媒體）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、JP、MY、SG、HK、TW</div><div class="chips"><span class="chip">Spotify（串流服務）</span><span class="chip">Netflix（串流服務）</span><span class="chip">WhatsApp</span><span class="chip">Instagram（社群媒體）</span></div></td>
+<td class="num" data-l="花費">NT$23,281</td><td class="num" data-l="購買">50</td><td class="num" data-l="ROAS"><span class="r good">3.27</span></td><td class="num" data-l="每次購買成本">NT$466</td><td class="num" data-l="點擊率">1.13%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-煦暖曆煦暖曆instagram view 365</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜5 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">instagram view  365</span><span class="chip ca">已追蹤用戶ＩＧ</span><span class="chip ca">曾和任何貼文或廣告有互動的用戶ins</span></div></td>
+<td class="num" data-l="花費">NT$22,921</td><td class="num" data-l="購買">43</td><td class="num" data-l="ROAS"><span class="r good">2.79</span></td><td class="num" data-l="每次購買成本">NT$533</td><td class="num" data-l="點擊率">0.66%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 鮮花圖鑑日曆 插花</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">興趣</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip">插花</span><span class="chip">觀賞植物（植物與花卉）</span><span class="chip">花卉（植物與花卉）</span><span class="chip">開花植物（植物與花卉）</span></div></td>
+<td class="num" data-l="花費">NT$21,991</td><td class="num" data-l="購買">32</td><td class="num" data-l="ROAS"><span class="r good">2.36</span></td><td class="num" data-l="每次購買成本">NT$687</td><td class="num" data-l="點擊率">0.83%</td></tr>
+<tr class="off"><td class="nm"><div class="an">幹話厭世語錄日曆 Facebook（社群媒體）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、HK、TW</div><div class="chips"><span class="chip">Facebook（社群媒體）</span><span class="chip">YouTube（串流服務）</span><span class="chip">Facebook Page admins</span></div></td>
+<td class="num" data-l="花費">NT$21,869</td><td class="num" data-l="購買">42</td><td class="num" data-l="ROAS"><span class="r good">3.23</span></td><td class="num" data-l="每次購買成本">NT$521</td><td class="num" data-l="點擊率">0.90%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥語錄卡ig 365互動貼文</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">ig 365互動貼文</span></div></td>
+<td class="num" data-l="花費">NT$20,738</td><td class="num" data-l="購買">22</td><td class="num" data-l="ROAS"><span class="r mid">1.33</span></td><td class="num" data-l="每次購買成本">NT$943</td><td class="num" data-l="點擊率">0.91%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-近期壽星</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">興趣</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">Upcoming birthday</span><span class="chip">Birthday in December</span><span class="chip">Birthday in November</span><span class="chip">Birthday in October</span><span class="chip">Birthday in September</span></div></td>
+<td class="num" data-l="花費">NT$19,543</td><td class="num" data-l="購買">27</td><td class="num" data-l="ROAS"><span class="r good">2.45</span></td><td class="num" data-l="每次購買成本">NT$724</td><td class="num" data-l="點擊率">0.89%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆早鳥｜煦暖曆FB互動7D-1Y</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+</div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">煦暖曆FB互動7D-1Y</span><span class="chip ca">2026煦暖曆系列購買名單</span><span class="chip ca">ig 365互動貼文</span><span class="chip ca">facebook 曾與你的粉絲專頁互動的用戶</span></div></td>
+<td class="num" data-l="花費">NT$17,908</td><td class="num" data-l="購買">30</td><td class="num" data-l="ROAS"><span class="r good">3.29</span></td><td class="num" data-l="每次購買成本">NT$597</td><td class="num" data-l="點擊率">1.21%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束日日法華 中華文化 - 複本</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜5 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、SG、HK、TW</div><div class="chips"><span class="chip">中華文化</span></div></td>
+<td class="num" data-l="花費">NT$16,277</td><td class="num" data-l="購買">34</td><td class="num" data-l="ROAS"><span class="r good">4.09</span></td><td class="num" data-l="每次購買成本">NT$479</td><td class="num" data-l="點擊率">2.01%</td></tr>
+<tr class="off"><td class="nm"><div class="an">幹話厭世語錄日曆 近期壽星</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、HK、TW</div><div class="chips"><span class="chip">Upcoming birthday</span><span class="chip">Anniversary within 30 days</span><span class="chip">Anniversary within 31-60 Days</span></div></td>
+<td class="num" data-l="花費">NT$16,275</td><td class="num" data-l="購買">25</td><td class="num" data-l="ROAS"><span class="r good">3.26</span></td><td class="num" data-l="每次購買成本">NT$651</td><td class="num" data-l="點擊率">0.89%</td></tr>
+<tr class="off"><td class="nm"><div class="an">星座運勢日曆 age 22-48</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">廣泛</span>目標：購買｜5 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="muted">無（交給系統找人）</span></div></td>
+<td class="num" data-l="花費">NT$15,631</td><td class="num" data-l="購買">17</td><td class="num" data-l="ROAS"><span class="r mid">1.80</span></td><td class="num" data-l="每次購買成本">NT$919</td><td class="num" data-l="點擊率">0.70%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-幹話日曆幽默 (喜劇)</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">Funny Videos</span><span class="chip">爆紅影片 (網路影片)</span><span class="chip">網路迷因（流行文化）</span><span class="chip">幽默 (喜劇)</span></div></td>
+<td class="num" data-l="花費">NT$15,517</td><td class="num" data-l="購買">48</td><td class="num" data-l="ROAS"><span class="r good">4.82</span></td><td class="num" data-l="每次購買成本">NT$323</td><td class="num" data-l="點擊率">1.63%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆早鳥｜煦暖曆IG互動7D~1Y</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+</div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">ig 365互動貼文</span><span class="chip ca">facebook 曾與你的粉絲專頁互動的用戶</span></div></td>
+<td class="num" data-l="花費">NT$15,376</td><td class="num" data-l="購買">23</td><td class="num" data-l="ROAS"><span class="r good">2.43</span></td><td class="num" data-l="每次購買成本">NT$669</td><td class="num" data-l="點擊率">1.20%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-幹話日曆已追蹤用戶ＩＧ</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜8 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">v</span><span class="chip ca">已追蹤用戶ＩＧ</span><span class="chip ca">曾和任何貼文或廣告有互動的用戶ins</span></div></td>
+<td class="num" data-l="花費">NT$15,211</td><td class="num" data-l="購買">18</td><td class="num" data-l="ROAS"><span class="r mid">1.91</span></td><td class="num" data-l="每次購買成本">NT$845</td><td class="num" data-l="點擊率">0.96%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-近期壽星</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜8 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">禮物（社會觀念）</span><span class="chip">生日（活動）</span><span class="chip">Upcoming birthday</span></div></td>
+<td class="num" data-l="花費">NT$14,194</td><td class="num" data-l="購買">23</td><td class="num" data-l="ROAS"><span class="r good">2.25</span></td><td class="num" data-l="每次購買成本">NT$617</td><td class="num" data-l="點擊率">1.38%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束日日法華 ig 365互動貼文 - 複本</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜5 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">煦暖曆FB互動7D-1Y</span><span class="chip ca">ig 365互動貼文</span><span class="chip ca">已追蹤用戶ＩＧ</span><span class="chip ca">曾和任何貼文或廣告有互動的用戶ins</span></div></td>
+<td class="num" data-l="花費">NT$14,105</td><td class="num" data-l="購買">24</td><td class="num" data-l="ROAS"><span class="r good">2.56</span></td><td class="num" data-l="每次購買成本">NT$588</td><td class="num" data-l="點擊率">1.51%</td></tr>
+<tr class="off"><td class="nm"><div class="an">九月幹話厭世語錄日曆0902 -幽默 (喜劇)</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、JP、MY、SG、HK、TW</div><div class="chips"><span class="chip">笑話</span><span class="chip">幽默 (喜劇)</span></div></td>
+<td class="num" data-l="花費">NT$13,897</td><td class="num" data-l="購買">33</td><td class="num" data-l="ROAS"><span class="r good">4.98</span></td><td class="num" data-l="每次購買成本">NT$421</td><td class="num" data-l="點擊率">1.23%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0902-煦暖曆超早鳥穩定交往中</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">生活品質（心理學）</span><span class="chip">愛（情感）</span><span class="chip">感情狀態：穩定交往中</span></div></td>
+<td class="num" data-l="花費">NT$13,836</td><td class="num" data-l="購買">25</td><td class="num" data-l="ROAS"><span class="r good">3.00</span></td><td class="num" data-l="每次購買成本">NT$553</td><td class="num" data-l="點擊率">0.95%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 煦暖曆手帳 類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span><span class="chip ca">曾和任何貼文或廣告有互動的用戶ins</span></div></td>
+<td class="num" data-l="花費">NT$12,742</td><td class="num" data-l="購買">23</td><td class="num" data-l="ROAS"><span class="r good">2.11</span></td><td class="num" data-l="每次購買成本">NT$554</td><td class="num" data-l="點擊率">1.34%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-Airbnb（住宿）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">旅遊網站（網站）</span><span class="chip">Airbnb（住宿）</span><span class="chip">TripAdvisor（旅遊觀光業）</span><span class="chip">Booking.com（旅遊觀光業）</span></div></td>
+<td class="num" data-l="花費">NT$12,712</td><td class="num" data-l="購買">30</td><td class="num" data-l="ROAS"><span class="r good">3.41</span></td><td class="num" data-l="每次購買成本">NT$424</td><td class="num" data-l="點擊率">1.05%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 煦暖曆手帳 煦暖曆IG互動7D~1Y</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜7 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">煦暖曆FB互動7D-1Y</span></div></td>
+<td class="num" data-l="花費">NT$12,213</td><td class="num" data-l="購買">23</td><td class="num" data-l="ROAS"><span class="r good">2.39</span></td><td class="num" data-l="每次購買成本">NT$531</td><td class="num" data-l="點擊率">1.41%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 煦暖曆手帳 類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單</span><span class="chip ca">v</span></div></td>
+<td class="num" data-l="花費">NT$11,777</td><td class="num" data-l="購買">15</td><td class="num" data-l="ROAS"><span class="r mid">1.54</span></td><td class="num" data-l="每次購買成本">NT$785</td><td class="num" data-l="點擊率">1.45%</td></tr>
+<tr class="off"><td class="nm"><div class="an">ig 365互動貼文</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">ig 365互動貼文</span><span class="chip ca">已追蹤用戶ＩＧ</span><span class="chip ca">曾和任何貼文或廣告有互動的用戶ins</span></div></td>
+<td class="num" data-l="花費">NT$11,645</td><td class="num" data-l="購買">26</td><td class="num" data-l="ROAS"><span class="r good">4.12</span></td><td class="num" data-l="每次購買成本">NT$448</td><td class="num" data-l="點擊率">1.44%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆 ig 365互動貼文 - 複本</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">ig 365互動貼文</span><span class="chip ca">facebook 曾與你的粉絲專頁互動的用戶</span></div></td>
+<td class="num" data-l="花費">NT$11,241</td><td class="num" data-l="購買">12</td><td class="num" data-l="ROAS"><span class="r mid">1.65</span></td><td class="num" data-l="每次購買成本">NT$937</td><td class="num" data-l="點擊率">1.13%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-幽默 (喜劇)</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜8 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">Funny Videos</span><span class="chip">爆紅影片 (網路影片)</span><span class="chip">幽默 (喜劇)</span></div></td>
+<td class="num" data-l="花費">NT$10,498</td><td class="num" data-l="購買">24</td><td class="num" data-l="ROAS"><span class="r good">4.25</span></td><td class="num" data-l="每次購買成本">NT$437</td><td class="num" data-l="點擊率">1.51%</td></tr>
+<tr class="on"><td class="nm"><div class="an">0826_超早鳥即將結束-穩定交往中</div><div class="sub"><span class="st on">投遞中</span><span class="tag">興趣</span>目標：購買｜8 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">快樂（情感）</span><span class="chip">感情狀態：穩定交往中</span></div></td>
+<td class="num" data-l="花費">NT$9,891</td><td class="num" data-l="購買">19</td><td class="num" data-l="ROAS"><span class="r good">2.69</span></td><td class="num" data-l="每次購買成本">NT$521</td><td class="num" data-l="點擊率">1.38%</td></tr>
+<tr class="off"><td class="nm"><div class="an">語錄卡網紅dai-ig 365互動貼文</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜1 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">ig 365互動貼文</span></div></td>
+<td class="num" data-l="花費">NT$9,552</td><td class="num" data-l="購買">23</td><td class="num" data-l="ROAS"><span class="r good">2.17</span></td><td class="num" data-l="每次購買成本">NT$415</td><td class="num" data-l="點擊率">1.28%</td></tr>
+<tr class="off"><td class="nm"><div class="an">幹話厭世語錄日曆 ig 365互動貼文</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">ig 365互動貼文</span></div></td>
+<td class="num" data-l="花費">NT$9,050</td><td class="num" data-l="購買">10</td><td class="num" data-l="ROAS"><span class="r good">2.53</span></td><td class="num" data-l="每次購買成本">NT$905</td><td class="num" data-l="點擊率">0.81%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束日日法華 35-65 - 複本</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">廣泛</span>目標：購買｜5 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、SG、HK、TW</div><div class="chips"><span class="muted">無（交給系統找人）</span></div></td>
+<td class="num" data-l="花費">NT$9,012</td><td class="num" data-l="購買">18</td><td class="num" data-l="ROAS"><span class="r good">3.03</span></td><td class="num" data-l="每次購買成本">NT$501</td><td class="num" data-l="點擊率">2.13%</td></tr>
+<tr class="off"><td class="nm"><div class="an">電子版日曆｜ig 365互動貼文</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">ig 365互動貼文</span><span class="chip ca">facebook 曾與你的粉絲專頁互動的用戶</span></div></td>
+<td class="num" data-l="花費">NT$8,548</td><td class="num" data-l="購買">16</td><td class="num" data-l="ROAS"><span class="r good">2.08</span></td><td class="num" data-l="每次購買成本">NT$534</td><td class="num" data-l="點擊率">1.28%</td></tr>
+<tr class="off"><td class="nm"><div class="an">星座運勢日曆 age 22-48 - 星座 (宗教和心靈)</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">星座 (宗教和心靈)</span></div></td>
+<td class="num" data-l="花費">NT$7,950</td><td class="num" data-l="購買">6</td><td class="num" data-l="ROAS"><span class="r mid">1.03</span></td><td class="num" data-l="每次購買成本">NT$1,325</td><td class="num" data-l="點擊率">0.84%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-幹話日曆煦暖曆IG互動7D~1Y</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">ig 365互動貼文</span></div></td>
+<td class="num" data-l="花費">NT$7,730</td><td class="num" data-l="購買">10</td><td class="num" data-l="ROAS"><span class="r mid">1.84</span></td><td class="num" data-l="每次購買成本">NT$773</td><td class="num" data-l="點擊率">1.53%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 星座日曆 ig 365互動貼文</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip ca">v</span><span class="chip ca">ig 365互動貼文</span></div></td>
+<td class="num" data-l="花費">NT$7,685</td><td class="num" data-l="購買">13</td><td class="num" data-l="ROAS"><span class="r good">2.95</span></td><td class="num" data-l="每次購買成本">NT$591</td><td class="num" data-l="點擊率">0.76%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-煦暖曆煦暖曆IG互動7D~1Y</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">煦暖曆FB互動7D-1Y</span></div></td>
+<td class="num" data-l="花費">NT$7,313</td><td class="num" data-l="購買">13</td><td class="num" data-l="ROAS"><span class="r good">2.37</span></td><td class="num" data-l="每次購買成本">NT$563</td><td class="num" data-l="點擊率">0.81%</td></tr>
+<tr class="on"><td class="nm"><div class="an">0826_超早鳥即將結束-幹話日曆幽默 (喜劇) - 複本</div><div class="sub"><span class="st on">投遞中</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">趣味 (興趣和休閒活動)</span><span class="chip">Television comedy</span><span class="chip">笑話</span></div></td>
+<td class="num" data-l="花費">NT$7,121</td><td class="num" data-l="購買">22</td><td class="num" data-l="ROAS"><span class="r good">3.70</span></td><td class="num" data-l="每次購買成本">NT$324</td><td class="num" data-l="點擊率">2.19%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0902-煦暖曆超早鳥近期壽星</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">Upcoming birthday</span><span class="chip">Friends of people with birthdays in a month</span></div></td>
+<td class="num" data-l="花費">NT$6,912</td><td class="num" data-l="購買">14</td><td class="num" data-l="ROAS"><span class="r good">3.72</span></td><td class="num" data-l="每次購買成本">NT$494</td><td class="num" data-l="點擊率">0.97%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-煦暖月曆已追蹤用戶ＩＧ</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">instagram view  365</span><span class="chip ca">ig 365互動貼文</span><span class="chip ca">已追蹤用戶ＩＧ</span></div></td>
+<td class="num" data-l="花費">NT$6,752</td><td class="num" data-l="購買">5</td><td class="num" data-l="ROAS"><span class="r mid">1.14</span></td><td class="num" data-l="每次購買成本">NT$1,350</td><td class="num" data-l="點擊率">1.22%</td></tr>
+<tr class="off"><td class="nm"><div class="an">星座運勢怪奇物語（電視影集）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">怪奇物語（電視影集）</span><span class="chip">Netflix（串流服務）</span><span class="chip">YouTube（串流服務）</span></div></td>
+<td class="num" data-l="花費">NT$6,726</td><td class="num" data-l="購買">8</td><td class="num" data-l="ROAS"><span class="r mid">1.74</span></td><td class="num" data-l="每次購買成本">NT$841</td><td class="num" data-l="點擊率">1.48%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-煦暖月曆類似廣告受眾 (1% to 2%) - 語錄卡_VC_30days</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (4% to 5%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (3% to 4%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (2% to 3%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (1% to 2%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$6,593</td><td class="num" data-l="購買">10</td><td class="num" data-l="ROAS"><span class="r good">2.01</span></td><td class="num" data-l="每次購買成本">NT$659</td><td class="num" data-l="點擊率">1.58%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 煦暖曆手帳 類似廣告受眾 互動7day</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜7 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">曾和任何貼文或廣告有互動的用戶ins</span></div></td>
+<td class="num" data-l="花費">NT$6,525</td><td class="num" data-l="購買">12</td><td class="num" data-l="ROAS"><span class="r good">2.38</span></td><td class="num" data-l="每次購買成本">NT$544</td><td class="num" data-l="點擊率">1.41%</td></tr>
+<tr class="off"><td class="nm"><div class="an">電子版日曆｜Apple Watch（消費電子產品）</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">Apple Watch（消費電子產品）</span><span class="chip">iPhone（智慧型手機）</span><span class="chip">iOS（作業系統）</span></div></td>
+<td class="num" data-l="花費">NT$6,428</td><td class="num" data-l="購買">14</td><td class="num" data-l="ROAS"><span class="r good">3.32</span></td><td class="num" data-l="每次購買成本">NT$459</td><td class="num" data-l="點擊率">1.68%</td></tr>
+<tr class="off"><td class="nm"><div class="an">星座運勢日曆 age 22-48 - instagram</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">Instagram（社群媒體）</span></div></td>
+<td class="num" data-l="花費">NT$6,404</td><td class="num" data-l="購買">10</td><td class="num" data-l="ROAS"><span class="r mid">1.92</span></td><td class="num" data-l="每次購買成本">NT$640</td><td class="num" data-l="點擊率">1.46%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-幹話日曆類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 2025 煦暖曆官網｜CyberBiz - Website using Purchase</span><span class="chip ca">類似廣告受眾 (TW, 3%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$6,387</td><td class="num" data-l="購買">4</td><td class="num" data-l="ROAS"><span class="r mid">1.13</span></td><td class="num" data-l="每次購買成本">NT$1,597</td><td class="num" data-l="點擊率">1.73%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆 類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單 - 複本</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單</span><span class="chip ca">類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單</span></div></td>
+<td class="num" data-l="花費">NT$6,218</td><td class="num" data-l="購買">4</td><td class="num" data-l="ROAS"><span class="r bad">0.69</span></td><td class="num" data-l="每次購買成本">NT$1,554</td><td class="num" data-l="點擊率">1.42%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束煦暖曆-Instagram（社群媒體）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">Netflix（串流服務）</span><span class="chip">Instagram（社群媒體）</span><span class="chip">YouTube（串流服務）</span></div></td>
+<td class="num" data-l="花費">NT$6,047</td><td class="num" data-l="購買">9</td><td class="num" data-l="ROAS"><span class="r good">2.22</span></td><td class="num" data-l="每次購買成本">NT$672</td><td class="num" data-l="點擊率">0.89%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆IG互動7D~1Y</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">煦暖曆FB互動7D-1Y</span></div></td>
+<td class="num" data-l="花費">NT$5,580</td><td class="num" data-l="購買">16</td><td class="num" data-l="ROAS"><span class="r good">4.08</span></td><td class="num" data-l="每次購買成本">NT$349</td><td class="num" data-l="點擊率">1.68%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥語錄卡煦暖曆IG互動7D~1Y</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">ig 365互動貼文</span><span class="chip ca">facebook 曾與你的粉絲專頁互動的用戶</span></div></td>
+<td class="num" data-l="花費">NT$5,390</td><td class="num" data-l="購買">6</td><td class="num" data-l="ROAS"><span class="r mid">1.29</span></td><td class="num" data-l="每次購買成本">NT$898</td><td class="num" data-l="點擊率">1.49%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-幹話日曆Instagram（社群媒體）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">Netflix（串流服務）</span><span class="chip">Instagram（社群媒體）</span></div></td>
+<td class="num" data-l="花費">NT$5,363</td><td class="num" data-l="購買">17</td><td class="num" data-l="ROAS"><span class="r good">3.74</span></td><td class="num" data-l="每次購買成本">NT$315</td><td class="num" data-l="點擊率">1.74%</td></tr>
+<tr class="off"><td class="nm"><div class="an">Comedy-drama</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">喜劇片（電影）</span><span class="chip">Comedy-drama</span></div></td>
+<td class="num" data-l="花費">NT$5,245</td><td class="num" data-l="購買">4</td><td class="num" data-l="ROAS"><span class="r mid">1.29</span></td><td class="num" data-l="每次購買成本">NT$1,311</td><td class="num" data-l="點擊率">1.05%</td></tr>
+<tr class="off"><td class="nm"><div class="an">星座運勢日曆 age 22-48 - facebook 曾與你的粉絲專頁互動的用戶</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">facebook 曾與你的粉絲專頁互動的用戶</span></div></td>
+<td class="num" data-l="花費">NT$5,198</td><td class="num" data-l="購買">7</td><td class="num" data-l="ROAS"><span class="r mid">1.52</span></td><td class="num" data-l="每次購買成本">NT$743</td><td class="num" data-l="點擊率">0.60%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 星座日曆 占星術（靈性）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip">星座 (宗教和心靈)</span><span class="chip">財富（經濟）</span><span class="chip">運氣</span><span class="chip">占星術（靈性）</span></div></td>
+<td class="num" data-l="花費">NT$4,775</td><td class="num" data-l="購買">3</td><td class="num" data-l="ROAS"><span class="r bad">0.95</span></td><td class="num" data-l="每次購買成本">NT$1,592</td><td class="num" data-l="點擊率">0.94%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-旅行機票日曆-煦暖曆FB互動7D-1Y</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">煦暖曆FB互動7D-1Y</span></div></td>
+<td class="num" data-l="花費">NT$4,773</td><td class="num" data-l="購買">2</td><td class="num" data-l="ROAS"><span class="r bad">0.87</span></td><td class="num" data-l="每次購買成本">NT$2,386</td><td class="num" data-l="點擊率">0.56%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆 Netflix（串流服務）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">Facebook（社群媒體）</span><span class="chip">Netflix（串流服務）</span><span class="chip">YouTube（串流服務）</span></div></td>
+<td class="num" data-l="花費">NT$4,282</td><td class="num" data-l="購買">11</td><td class="num" data-l="ROAS"><span class="r good">3.32</span></td><td class="num" data-l="每次購買成本">NT$389</td><td class="num" data-l="點擊率">1.35%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束日日法華類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days - 複本</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜5 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單</span><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$4,107</td><td class="num" data-l="購買">8</td><td class="num" data-l="ROAS"><span class="r good">3.63</span></td><td class="num" data-l="每次購買成本">NT$513</td><td class="num" data-l="點擊率">2.15%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-旅行機票日曆-煦暖曆FB互動瀏覽ig 365互動貼文</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">ig 365互動貼文</span></div></td>
+<td class="num" data-l="花費">NT$3,977</td><td class="num" data-l="購買">2</td><td class="num" data-l="ROAS"><span class="r mid">1.24</span></td><td class="num" data-l="每次購買成本">NT$1,988</td><td class="num" data-l="點擊率">0.42%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 煦暖曆手帳 筆記本</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">興趣</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">文具（辦公室用品）</span><span class="chip">筆記本</span><span class="chip">日記</span><span class="chip">Friends of people with birthdays in a month</span></div></td>
+<td class="num" data-l="花費">NT$3,911</td><td class="num" data-l="購買">13</td><td class="num" data-l="ROAS"><span class="r good">4.49</span></td><td class="num" data-l="每次購買成本">NT$301</td><td class="num" data-l="點擊率">2.72%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 星座日曆 近期壽星 - 複本</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">興趣</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip">問候卡</span><span class="chip">禮品店 (購物)</span><span class="chip">Upcoming birthday</span></div></td>
+<td class="num" data-l="花費">NT$3,593</td><td class="num" data-l="購買">6</td><td class="num" data-l="ROAS"><span class="r good">2.05</span></td><td class="num" data-l="每次購買成本">NT$599</td><td class="num" data-l="點擊率">1.01%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 星座日曆 近期壽星</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip">問候卡</span><span class="chip">禮品店 (購物)</span><span class="chip">Upcoming birthday</span></div></td>
+<td class="num" data-l="花費">NT$3,465</td><td class="num" data-l="購買">6</td><td class="num" data-l="ROAS"><span class="r good">2.08</span></td><td class="num" data-l="每次購買成本">NT$578</td><td class="num" data-l="點擊率">0.79%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 星座日曆 類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$3,348</td><td class="num" data-l="購買">4</td><td class="num" data-l="ROAS"><span class="r good">2.38</span></td><td class="num" data-l="每次購買成本">NT$837</td><td class="num" data-l="點擊率">1.03%</td></tr>
+<tr class="off"><td class="nm"><div class="an">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單</span><span class="chip ca">類似廣告受眾 (TW, 3%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$3,284</td><td class="num" data-l="購買">6</td><td class="num" data-l="ROAS"><span class="r good">2.72</span></td><td class="num" data-l="每次購買成本">NT$547</td><td class="num" data-l="點擊率">1.40%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 星座日曆煦暖曆FB互動7D-1Y</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">煦暖曆FB互動7D-1Y</span><span class="chip ca">華南銀行</span></div></td>
+<td class="num" data-l="花費">NT$3,184</td><td class="num" data-l="購買">7</td><td class="num" data-l="ROAS"><span class="r good">3.78</span></td><td class="num" data-l="每次購買成本">NT$455</td><td class="num" data-l="點擊率">1.05%</td></tr>
+<tr class="off"><td class="nm"><div class="an">電子版日曆｜旅行曆煦暖曆IG互動7D~1Y</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">已追蹤用戶ＩＧ</span><span class="chip ca">瀏覽365fb</span></div></td>
+<td class="num" data-l="花費">NT$3,065</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.93%</td></tr>
+<tr class="off"><td class="nm"><div class="an">肯德基（餐廳）</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">麥當勞（餐廳）</span><span class="chip">肯德基（餐廳）</span></div></td>
+<td class="num" data-l="花費">NT$2,884</td><td class="num" data-l="購買">5</td><td class="num" data-l="ROAS"><span class="r good">3.71</span></td><td class="num" data-l="每次購買成本">NT$577</td><td class="num" data-l="點擊率">1.14%</td></tr>
+<tr class="off"><td class="nm"><div class="an">2027 星座曆 女性企業家（商業與財務）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">新創公司（商業與財務）</span><span class="chip">女性企業家（商業與財務）</span><span class="chip">Small business owners</span></div></td>
+<td class="num" data-l="花費">NT$2,462</td><td class="num" data-l="購買">3</td><td class="num" data-l="ROAS"><span class="r mid">1.74</span></td><td class="num" data-l="每次購買成本">NT$821</td><td class="num" data-l="點擊率">0.66%</td></tr>
+<tr class="off"><td class="nm"><div class="an">female all - 語錄卡_VC_30days</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 女｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (TW, 3%) - 語錄卡_VC_30days</span><span class="chip ca">instagram view  365</span><span class="chip ca">ig 365互動貼文</span></div></td>
+<td class="num" data-l="花費">NT$2,427</td><td class="num" data-l="購買">1</td><td class="num" data-l="ROAS"><span class="r bad">0.74</span></td><td class="num" data-l="每次購買成本">NT$2,427</td><td class="num" data-l="點擊率">0.78%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束煦暖曆-語錄卡_VC_30days</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜5 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$2,409</td><td class="num" data-l="購買">7</td><td class="num" data-l="ROAS"><span class="r good">2.13</span></td><td class="num" data-l="每次購買成本">NT$344</td><td class="num" data-l="點擊率">0.70%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-花語圖鑑日曆-iig 365互動貼文</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">instagram view  365</span><span class="chip ca">ig 365互動貼文</span><span class="chip ca">瀏覽365</span><span class="chip ca">瀏覽365fb</span></div></td>
+<td class="num" data-l="花費">NT$2,232</td><td class="num" data-l="購買">2</td><td class="num" data-l="ROAS"><span class="r good">5.02</span></td><td class="num" data-l="每次購買成本">NT$1,116</td><td class="num" data-l="點擊率">0.93%</td></tr>
+<tr class="off"><td class="nm"><div class="an">電子版日曆｜類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單</span><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span><span class="chip ca">汽機科技.csv</span></div></td>
+<td class="num" data-l="花費">NT$2,040</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">2.18%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-花語圖鑑日曆-類似廣告受眾 (1% to 3%) - 煦暖曆 - 類似廣告受眾 (1% to 2%) - v</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜1 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 5%) - 2026煦暖曆問卷受眾（2026 Sed)</span><span class="chip ca">類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單</span><span class="chip ca">類似廣告受眾 (TW, 3%) - 2026 煦暖曆官網｜CyberBiz - Website using Purchase</span><span class="chip ca">v</span><span class="chip ca">類似廣告受眾 (1%) - v</span><span class="chip ca">類似廣告受眾 (2% to 3%) - v</span><span class="chip ca">類似廣告受眾 (4% to 5%) - v</span><span class="chip ca">類似廣告受眾 (1% to 2%) - v</span><span class="chip ca">類似廣告受眾 (3% to 4%) - v</span></div></td>
+<td class="num" data-l="花費">NT$2,009</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.95%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆ig 365互動貼文</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">ig 365互動貼文</span></div></td>
+<td class="num" data-l="花費">NT$1,954</td><td class="num" data-l="購買">1</td><td class="num" data-l="ROAS"><span class="r bad">0.49</span></td><td class="num" data-l="每次購買成本">NT$1,954</td><td class="num" data-l="點擊率">1.57%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-花語圖鑑日曆-汽機科技.csv</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">KOL_周慕姿IG互動</span><span class="chip ca">汽機科技.csv</span><span class="chip ca">華南銀行</span><span class="chip ca">嘖嘖日曆購買名單.csv</span></div></td>
+<td class="num" data-l="花費">NT$1,720</td><td class="num" data-l="購買">2</td><td class="num" data-l="ROAS"><span class="r good">2.58</span></td><td class="num" data-l="每次購買成本">NT$860</td><td class="num" data-l="點擊率">1.42%</td></tr>
+<tr class="off"><td class="nm"><div class="an">語錄卡網紅dai-華納瀏覽365fb</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜1 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">瀏覽365fb</span><span class="chip ca">類似廣告受眾 (2% to 3%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (3% to 4%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (8% to 10%) - 瀏覽365fb</span></div></td>
+<td class="num" data-l="花費">NT$1,570</td><td class="num" data-l="購買">2</td><td class="num" data-l="ROAS"><span class="r mid">1.47</span></td><td class="num" data-l="每次購買成本">NT$785</td><td class="num" data-l="點擊率">1.98%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆早鳥｜Instagram（社群媒體）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+</div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">Instagram（社群媒體）</span></div></td>
+<td class="num" data-l="花費">NT$1,556</td><td class="num" data-l="購買">3</td><td class="num" data-l="ROAS"><span class="r good">4.52</span></td><td class="num" data-l="每次購買成本">NT$519</td><td class="num" data-l="點擊率">1.61%</td></tr>
+<tr class="off"><td class="nm"><div class="an">female all - 曾和任何貼文或廣告有互動的用戶ins</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 女｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">v</span><span class="chip ca">已追蹤用戶ＩＧ</span><span class="chip ca">曾和任何貼文或廣告有互動的用戶ins</span></div></td>
+<td class="num" data-l="花費">NT$1,397</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.52%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆 類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單</span><span class="chip ca">類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單</span></div></td>
+<td class="num" data-l="花費">NT$1,333</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.25%</td></tr>
+<tr class="off"><td class="nm"><div class="an">2027 星座曆 煦暖曆ig 365互動貼文</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">instagram view  365</span><span class="chip ca">ig 365互動貼文</span><span class="chip ca">曾和任何貼文或廣告有互動的用戶ins</span></div></td>
+<td class="num" data-l="花費">NT$1,276</td><td class="num" data-l="購買">4</td><td class="num" data-l="ROAS"><span class="r good">2.82</span></td><td class="num" data-l="每次購買成本">NT$319</td><td class="num" data-l="點擊率">0.83%</td></tr>
+<tr class="off"><td class="nm"><div class="an">中小型企業（商業與財務）</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">小型企業（商業與財務）</span><span class="chip">中小型企業（商業與財務）</span><span class="chip">社群媒體（網路媒體）</span></div></td>
+<td class="num" data-l="花費">NT$1,256</td><td class="num" data-l="購買">2</td><td class="num" data-l="ROAS"><span class="r good">6.70</span></td><td class="num" data-l="每次購買成本">NT$628</td><td class="num" data-l="點擊率">1.21%</td></tr>
+<tr class="off"><td class="nm"><div class="an">電子版日曆｜類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單</span><span class="chip ca">2026煦暖曆系列購買名單</span><span class="chip ca">類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單</span></div></td>
+<td class="num" data-l="花費">NT$1,227</td><td class="num" data-l="購買">2</td><td class="num" data-l="ROAS"><span class="r good">2.72</span></td><td class="num" data-l="每次購買成本">NT$614</td><td class="num" data-l="點擊率">2.44%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-旅行機票日曆-煦暖曆FB互動瀏覽365fb</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">瀏覽365</span><span class="chip ca">類似廣告受眾 (2%) - 瀏覽365</span><span class="chip ca">類似廣告受眾 (3% to 4%) - 瀏覽365</span><span class="chip ca">類似廣告受眾 (8% to 10%) - 瀏覽365</span><span class="chip ca">類似廣告受眾 (4% to 6%) - 瀏覽365</span><span class="chip ca">類似廣告受眾 (2% to 3%) - 瀏覽365</span><span class="chip ca">類似廣告受眾 (6% to 8%) - 瀏覽365</span><span class="chip ca">瀏覽365fb</span><span class="chip ca">類似廣告受眾 (2%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (6% to 8%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (4% to 6%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (2% to 3%) - 瀏覽365fb</span></div></td>
+<td class="num" data-l="花費">NT$1,185</td><td class="num" data-l="購買">3</td><td class="num" data-l="ROAS"><span class="r good">5.16</span></td><td class="num" data-l="每次購買成本">NT$395</td><td class="num" data-l="點擊率">0.63%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 煦暖曆手帳 興趣 &gt; 更多興趣 &gt; 文具（辦公室用品）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜5 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">文具（辦公室用品）</span><span class="chip">筆記本</span><span class="chip">日記</span><span class="chip">紙</span></div></td>
+<td class="num" data-l="花費">NT$1,177</td><td class="num" data-l="購買">5</td><td class="num" data-l="ROAS"><span class="r good">4.17</span></td><td class="num" data-l="每次購買成本">NT$235</td><td class="num" data-l="點擊率">1.95%</td></tr>
+<tr class="off"><td class="nm"><div class="an">2027 星座曆 煦暖曆類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 2025 煦暖曆官網｜CyberBiz - Website using Purchase</span><span class="chip ca">類似廣告受眾 (TW, 3%) - 2026 煦暖曆官網｜CyberBiz - Website using Purchase</span><span class="chip ca">類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單</span></div></td>
+<td class="num" data-l="花費">NT$1,113</td><td class="num" data-l="購買">2</td><td class="num" data-l="ROAS"><span class="r good">2.55</span></td><td class="num" data-l="每次購買成本">NT$556</td><td class="num" data-l="點擊率">0.92%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-花語圖鑑日曆-曾和任何貼文或廣告有互動的用戶ins</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">instagram view  365</span><span class="chip ca">曾和任何貼文或廣告有互動的用戶ins</span></div></td>
+<td class="num" data-l="花費">NT$1,075</td><td class="num" data-l="購買">1</td><td class="num" data-l="ROAS"><span class="r mid">1.67</span></td><td class="num" data-l="每次購買成本">NT$1,075</td><td class="num" data-l="點擊率">0.90%</td></tr>
+<tr class="off"><td class="nm"><div class="an">female all - 占星術（靈性）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 女｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">星座 (宗教和心靈)</span><span class="chip">水晶（金屬與礦物）</span><span class="chip">占星術（靈性）</span></div></td>
+<td class="num" data-l="花費">NT$814</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.63%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-Instagram（社群媒體）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">Instagram（社群媒體）</span></div></td>
+<td class="num" data-l="花費">NT$790</td><td class="num" data-l="購買">4</td><td class="num" data-l="ROAS"><span class="r good">6.60</span></td><td class="num" data-l="每次購買成本">NT$198</td><td class="num" data-l="點擊率">1.30%</td></tr>
+<tr class="off"><td class="nm"><div class="an">電子版日曆｜煦暖曆-類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單</span></div></td>
+<td class="num" data-l="花費">NT$724</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">2.00%</td></tr>
+<tr class="off"><td class="nm"><div class="an">語錄卡網紅dai-類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜1 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$722</td><td class="num" data-l="購買">1</td><td class="num" data-l="ROAS"><span class="r good">2.49</span></td><td class="num" data-l="每次購買成本">NT$722</td><td class="num" data-l="點擊率">1.82%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-華納365</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip ca">瀏覽365</span><span class="chip ca">瀏覽365fb</span><span class="chip ca">類似廣告受眾 (2%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (6% to 8%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (4% to 6%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (2% to 3%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (3% to 4%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (8% to 10%) - 瀏覽365fb</span></div></td>
+<td class="num" data-l="花費">NT$712</td><td class="num" data-l="購買">1</td><td class="num" data-l="ROAS"><span class="r mid">1.02</span></td><td class="num" data-l="每次購買成本">NT$712</td><td class="num" data-l="點擊率">1.33%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-花語圖鑑日曆-instagram view 365</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">instagram view  365</span><span class="chip ca">ig 365互動貼文</span><span class="chip ca">瀏覽365</span><span class="chip ca">瀏覽365fb</span></div></td>
+<td class="num" data-l="花費">NT$708</td><td class="num" data-l="購買">1</td><td class="num" data-l="ROAS"><span class="r good">2.57</span></td><td class="num" data-l="每次購買成本">NT$708</td><td class="num" data-l="點擊率">0.75%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 星座日曆 ig 365互動貼文 - 複本</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip ca">v</span><span class="chip ca">ig 365互動貼文</span></div></td>
+<td class="num" data-l="花費">NT$702</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.61%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆早鳥｜類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+</div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單</span></div></td>
+<td class="num" data-l="花費">NT$678</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.11%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-花語圖鑑日曆-類似廣告受眾 (1% to 3%) - 煦暖曆 - 類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$672</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.46%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 鮮花圖鑑日曆 類似廣告受眾 (TW, 3%) - 2025 煦暖曆官網｜CyberBiz - Website using Purchase</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">煦暖曆FB互動7D-1Y</span><span class="chip ca">已追蹤用戶ＩＧ</span></div></td>
+<td class="num" data-l="花費">NT$630</td><td class="num" data-l="購買">1</td><td class="num" data-l="ROAS"><span class="r good">3.80</span></td><td class="num" data-l="每次購買成本">NT$630</td><td class="num" data-l="點擊率">0.82%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆 ig 365互動貼文</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">ig 365互動貼文</span><span class="chip ca">facebook 曾與你的粉絲專頁互動的用戶</span></div></td>
+<td class="num" data-l="花費">NT$593</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.83%</td></tr>
+<tr class="off"><td class="nm"><div class="an">幹話厭世語錄日曆 華納fb365</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜1 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">瀏覽365fb</span><span class="chip ca">類似廣告受眾 (4% to 6%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (2% to 3%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (3% to 4%) - 瀏覽365fb</span><span class="chip ca">類似廣告受眾 (8% to 10%) - 瀏覽365fb</span></div></td>
+<td class="num" data-l="花費">NT$587</td><td class="num" data-l="購買">2</td><td class="num" data-l="ROAS"><span class="r good">10.38</span></td><td class="num" data-l="每次購買成本">NT$294</td><td class="num" data-l="點擊率">1.30%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-幽默 (喜劇) - 複本</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">Funny Videos</span><span class="chip">爆紅影片 (網路影片)</span><span class="chip">幽默 (喜劇)</span></div></td>
+<td class="num" data-l="花費">NT$542</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.60%</td></tr>
+<tr class="off"><td class="nm"><div class="an">電子版日曆｜旅行曆ig 365互動貼文 - 複本</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">ig 365互動貼文</span></div></td>
+<td class="num" data-l="花費">NT$517</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r bad">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.34%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆 加上目錄類似廣告受眾 (TW, 3%) - 語錄卡_VC_30days - 複本</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$513</td><td class="num" data-l="購買">1</td><td class="num" data-l="ROAS"><span class="r mid">1.71</span></td><td class="num" data-l="每次購買成本">NT$513</td><td class="num" data-l="點擊率">2.66%</td></tr>
+<tr class="off"><td class="nm"><div class="an">電子版日曆｜類似廣告受眾 (1% to 2%) - 語錄卡_VC_30days - 複本</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (3% to 4%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (2% to 3%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (1% to 2%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$452</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.60%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-煦暖曆禮物</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">禮物（社會觀念）</span><span class="chip">禮品店 (購物)</span><span class="chip">網路購物（零售）</span></div></td>
+<td class="num" data-l="花費">NT$448</td><td class="num" data-l="購買">1</td><td class="num" data-l="ROAS"><span class="r na">2.10</span></td><td class="num" data-l="每次購買成本">NT$448</td><td class="num" data-l="點擊率">0.60%</td></tr>
+<tr class="off"><td class="nm"><div class="an">電子版日曆｜曾經互動的消費者</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">本日優惠（零售）</span><span class="chip">Frequent Travelers</span><span class="chip">Engaged Shoppers</span></div></td>
+<td class="num" data-l="花費">NT$405</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.46%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 煦暖曆手帳 煦暖曆IG互動7D~1Y - 複本</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">煦暖曆FB互動7D-1Y</span></div></td>
+<td class="num" data-l="花費">NT$380</td><td class="num" data-l="購買">1</td><td class="num" data-l="ROAS"><span class="r na">4.42</span></td><td class="num" data-l="每次購買成本">NT$380</td><td class="num" data-l="點擊率">1.48%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 煦暖曆手帳 近期壽星</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">興趣</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">禮物（社會觀念）</span><span class="chip">生日（活動）</span><span class="chip">Upcoming birthday</span><span class="chip">Birthday in October</span><span class="chip">Birthday in September</span><span class="chip">Birthday in August</span><span class="chip">感情狀態：穩定交往中</span></div></td>
+<td class="num" data-l="花費">NT$327</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">2.64%</td></tr>
+<tr class="off"><td class="nm"><div class="an">語錄卡網紅dai-華納瀏覽類似廣告受眾 (4% to 5%) - instagram view 365</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜1 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">instagram view  365</span><span class="chip ca">類似廣告受眾 (1%) - instagram view  365</span><span class="chip ca">類似廣告受眾 (3% to 4%) - instagram view  365</span><span class="chip ca">類似廣告受眾 (2% to 3%) - instagram view  365</span><span class="chip ca">類似廣告受眾 (1% to 2%) - instagram view  365</span><span class="chip ca">類似廣告受眾 (4% to 5%) - instagram view  365</span></div></td>
+<td class="num" data-l="花費">NT$319</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.13%</td></tr>
+<tr class="off"><td class="nm"><div class="an">電子版日曆｜煦暖曆IG互動7D~1Y</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">煦暖曆FB互動7D-1Y</span></div></td>
+<td class="num" data-l="花費">NT$311</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.43%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-近期壽星 - 複本</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">Upcoming birthday</span><span class="chip">Birthday in December</span><span class="chip">Birthday in November</span><span class="chip">Birthday in October</span><span class="chip">Birthday in September</span></div></td>
+<td class="num" data-l="花費">NT$300</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.75%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 星座日曆煦暖曆FB互動7D-1Y - 複本</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span><span class="chip ca">煦暖曆FB互動7D-1Y</span><span class="chip ca">華南銀行</span></div></td>
+<td class="num" data-l="花費">NT$280</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.61%</td></tr>
+<tr class="off"><td class="nm"><div class="an">瀏覽365fb</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜5 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">instagram view  365</span><span class="chip ca">瀏覽365</span><span class="chip ca">瀏覽365fb</span></div></td>
+<td class="num" data-l="花費">NT$276</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.73%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆 煦暖曆IG互動7D~1Y</div><div class="sub"><span class="st off">活動已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span></div></td>
+<td class="num" data-l="花費">NT$260</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.41%</td></tr>
+<tr class="off"><td class="nm"><div class="an">星座運勢日曆 age 22-48 - 占星術（靈性）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜5 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">水晶（金屬與礦物）</span><span class="chip">情感（心理學）</span><span class="chip">運氣</span><span class="chip">占星術（靈性）</span></div></td>
+<td class="num" data-l="花費">NT$257</td><td class="num" data-l="購買">1</td><td class="num" data-l="ROAS"><span class="r na">3.65</span></td><td class="num" data-l="每次購買成本">NT$257</td><td class="num" data-l="點擊率">0.41%</td></tr>
+<tr class="off"><td class="nm"><div class="an">美食與餐廳類粉絲專頁管理員</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">Facebook Page admins</span><span class="chip">Retail page admins</span><span class="chip">Food &amp; Restaurant page admins</span></div></td>
+<td class="num" data-l="花費">NT$227</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.99%</td></tr>
+<tr class="off"><td class="nm"><div class="an">2027 星座曆 旅遊網站（網站）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">旅遊網站（網站）</span><span class="chip">Airbnb（住宿）</span></div></td>
+<td class="num" data-l="花費">NT$219</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.44%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-canva</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">視覺藝術（藝術）</span><span class="chip">平面設計（視覺藝術）</span><span class="chip">藝術展覽（視覺藝術）</span><span class="chip">Adobe Photoshop（軟體）</span><span class="chip">Canva</span></div></td>
+<td class="num" data-l="花費">NT$209</td><td class="num" data-l="購買">1</td><td class="num" data-l="ROAS"><span class="r na">4.49</span></td><td class="num" data-l="每次購買成本">NT$209</td><td class="num" data-l="點擊率">0.76%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 星座日曆 類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days - 複本</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜6 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$186</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.39%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0902-煦暖曆超早鳥2026煦暖曆系列購買名單</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單</span><span class="chip ca">2026煦暖曆系列購買名單</span><span class="chip ca">類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單</span><span class="chip ca">嘖嘖日曆購買名單.csv</span></div></td>
+<td class="num" data-l="花費">NT$179</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.86%</td></tr>
+<tr class="off"><td class="nm"><div class="an">九月幹話厭世語錄日曆0902 上班族（流行文化）</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、JP、MY、SG、HK、TW</div><div class="chips"><span class="chip">上班族（流行文化）</span><span class="chip">可愛</span><span class="chip">萌經濟</span></div></td>
+<td class="num" data-l="花費">NT$176</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.51%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束-interior design</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">室內設計（設計）</span><span class="chip">傢俱（居家裝潢）</span></div></td>
+<td class="num" data-l="花費">NT$160</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.50%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-花語圖鑑日曆-類似廣告受眾 (1% to 3%) - 煦暖曆 - Shopify using Purchase</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 2025 煦暖曆官網｜CyberBiz - Website using Purchase</span><span class="chip ca">類似廣告受眾 (TW, 3%) - 2026 煦暖曆官網｜CyberBiz - Website using Purchase</span></div></td>
+<td class="num" data-l="花費">NT$150</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.41%</td></tr>
+<tr class="off"><td class="nm"><div class="an">語錄卡網紅dai-煦暖曆FB互動7D-1Y</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜1 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">煦暖曆FB互動7D-1Y</span></div></td>
+<td class="num" data-l="花費">NT$142</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.67%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-旅行機票日曆-類似廣告受眾 (1% to 2%) - view</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (1%) - v</span><span class="chip ca">類似廣告受眾 (2% to 3%) - v</span><span class="chip ca">類似廣告受眾 (4% to 5%) - v</span><span class="chip ca">類似廣告受眾 (1% to 2%) - v</span></div></td>
+<td class="num" data-l="花費">NT$134</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.76%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆 煦暖曆IG互動7D~1Y - 複本</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">煦暖曆IG互動7D~1Y</span></div></td>
+<td class="num" data-l="花費">NT$132</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.73%</td></tr>
+<tr class="off"><td class="nm"><div class="an">female all</div><div class="sub"><span class="st off">已暫停</span><span class="tag">廣泛</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 女｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="muted">無（交給系統找人）</span></div></td>
+<td class="num" data-l="花費">NT$112</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.27%</td></tr>
+<tr class="off"><td class="nm"><div class="an">2027 星座曆 近期壽星</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜1 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">Upcoming birthday</span><span class="chip">感情狀態：穩定交往中</span></div></td>
+<td class="num" data-l="花費">NT$108</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.00%</td></tr>
+<tr class="off"><td class="nm"><div class="an">20260904手帳 煦暖曆手帳 類似廣告受眾 (1% to 2%) - 煦暖曆 - Shopify using AddToCart</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span><span class="chip ca">曾和任何貼文或廣告有互動的用戶ins</span><span class="chip ca">類似廣告受眾 (1%) - 煦暖曆 - Shopify using AddToCart</span><span class="chip ca">類似廣告受眾 (4% to 5%) - 煦暖曆 - Shopify using AddToCart</span><span class="chip ca">類似廣告受眾 (1% to 2%) - 煦暖曆 - Shopify using AddToCart</span><span class="chip ca">類似廣告受眾 (2% to 3%) - 煦暖曆 - Shopify using AddToCart</span></div></td>
+<td class="num" data-l="花費">NT$77</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.98%</td></tr>
+<tr class="off"><td class="nm"><div class="an">單身</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip">感情狀態：單身</span></div></td>
+<td class="num" data-l="花費">NT$58</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">1.55%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 鮮花圖鑑日曆 類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜4 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$46</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.95%</td></tr>
+<tr class="off"><td class="nm"><div class="an">早鳥預購-旅行機票日曆-煦暖曆填寫2025煦暖曆問卷名單</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜1 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip ca">填寫2025煦暖曆問卷名單</span></div></td>
+<td class="num" data-l="花費">NT$30</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.00%</td></tr>
+<tr class="off"><td class="nm"><div class="an">0826_超早鳥即將結束 鮮花圖鑑日曆 煦暖曆IG互動7D~1Y - 複本</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜1 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MY、SG、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 2025 煦暖曆官網｜CyberBiz - Website using Purchase</span><span class="chip ca">類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單</span></div></td>
+<td class="num" data-l="花費">NT$17</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">5.19%</td></tr>
+<tr class="off"><td class="nm"><div class="an">幹話厭世語錄日曆 i類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜3 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、HK、TW</div><div class="chips"><span class="chip ca">類似廣告受眾 (TW, 3%) - 語錄卡_VC_30days</span><span class="chip ca">類似廣告受眾 (TW, 1% to 5%) - 語錄卡_VC_30days</span></div></td>
+<td class="num" data-l="花費">NT$7</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.00%</td></tr>
+<tr class="off"><td class="nm"><div class="an">近期壽星</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">Upcoming birthday</span><span class="chip">感情狀態：穩定交往中</span></div></td>
+<td class="num" data-l="花費">NT$3</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.00%</td></tr>
+<tr class="off"><td class="nm"><div class="an">星座運勢日曆 age 22-48 - 近期壽星</div><div class="sub"><span class="st off">已暫停</span><span class="tag">興趣</span>目標：購買｜2 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> MO、MY、SG、HK、TW</div><div class="chips"><span class="chip">Upcoming birthday</span><span class="chip">Birthday in October</span><span class="chip">Birthday in September</span></div></td>
+<td class="num" data-l="花費">NT$3</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.00%</td></tr>
+<tr class="off"><td class="nm"><div class="an">煦暖曆 類似廣告受眾 KOL_周慕姿IG互動 - 複本</div><div class="sub"><span class="st off">已暫停</span><span class="tag">再行銷</span>目標：購買｜1 個廣告</div></td>
+<td class="set"><div><b>年齡</b> 18–65+ <span class="adv">Advantage+ 建議值</span></div><div><b>性別</b> 不限｜<b>地區</b> TW</div><div class="chips"><span class="chip ca">KOL_周慕姿IG互動</span><span class="chip ca">KOL_周慕姿FB互動1Y</span></div></td>
+<td class="num" data-l="花費">NT$1</td><td class="num" data-l="購買">0</td><td class="num" data-l="ROAS"><span class="r na">0.00</span></td><td class="num" data-l="每次購買成本">—</td><td class="num" data-l="點擊率">0.00%</td></tr></tbody>
+  </table></div>
+</section>
+
+<section aria-labelledby="h-cre" style="display:flex;flex-direction:column;gap:16px">
+  <div class="sec-h"><h2 id="h-cre">素材分析</h2><span class="n">依素材名稱合併（去掉「複本」）｜依花費排序｜以貼文圖片為準</span></div>
+  <p class="note">素材名稱常和實際內容不同，判斷請以圖片為準；影片顯示的是封面畫面。右下角是該素材合併後的 ROAS。</p>
+  <div class="grid"><article class="cr off"><div class="ph"><img src="img/120248933428650545.jpg" alt="row76-77 9x16.gif 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.90</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +11%（上一個 7 天 3.50）</div><div class="pd">幹話曆｜影片</div><div class="ck">row76-77 9x16.gif</div>
+<dl><div><dt>花費</dt><dd>NT$37,242</dd></div><div><dt>購買</dt><dd>83</dd></div><div><dt>每次購買成本</dt><dd>NT$449</dd></div><div><dt>點擊率</dt><dd>1.17%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1377496204536129" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848086740545.jpg" alt="0826_超早鳥即將結束-旅行機票日曆1 9x16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.81</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -43%（上一個 7 天 4.89）</div><div class="pd">旅行機票日曆｜圖片／分享</div><div class="ck">0826_超早鳥即將結束-旅行機票日曆1 9x16</div>
+<dl><div><dt>花費</dt><dd>NT$29,445</dd></div><div><dt>購買</dt><dd>52</dd></div><div><dt>每次購買成本</dt><dd>NT$566</dd></div><div><dt>點擊率</dt><dd>0.94%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761705109579" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248847624020545.jpg" alt="0826_超早鳥即將結束-煦暖曆6 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.13</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -49%（上一個 7 天 6.14）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束-煦暖曆6</div>
+<dl><div><dt>花費</dt><dd>NT$26,365</dd></div><div><dt>購買</dt><dd>57</dd></div><div><dt>每次購買成本</dt><dd>NT$463</dd></div><div><dt>點擊率</dt><dd>0.68%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371664248452658" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763074550545.jpg" alt="幹話厭世語錄日曆 華納4:5 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.13</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -40%（上一個 7 天 5.26）</div><div class="pd">幹話曆｜影片</div><div class="ck">幹話厭世語錄日曆 華納4:5</div>
+<dl><div><dt>花費</dt><dd>NT$54,353</dd></div><div><dt>購買</dt><dd>89</dd></div><div><dt>每次購買成本</dt><dd>NT$611</dd></div><div><dt>點擊率</dt><dd>0.98%</dd></div></dl>
+<div class="cf">出現在 11 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366510158968067" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248759969100545.jpg" alt="早鳥語錄卡-生活品質（心理學）chat gpt image 3 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.46</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -51%（上一個 7 天 2.98）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">早鳥語錄卡-生活品質（心理學）chat gpt image 3</div>
+<dl><div><dt>花費</dt><dd>NT$21,066</dd></div><div><dt>購買</dt><dd>24</dd></div><div><dt>每次購買成本</dt><dd>NT$878</dd></div><div><dt>點擊率</dt><dd>0.93%</dd></div></dl>
+<div class="cf">出現在 2 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366488502303566" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248847820630545.jpg" alt="0826_超早鳥即將結束-幹話日曆9x16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.47</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -48%（上一個 7 天 6.69）</div><div class="pd">幹話曆｜影片</div><div class="ck">0826_超早鳥即將結束-幹話日曆9x16</div>
+<dl><div><dt>花費</dt><dd>NT$30,774</dd></div><div><dt>購買</dt><dd>73</dd></div><div><dt>每次購買成本</dt><dd>NT$422</dd></div><div><dt>點擊率</dt><dd>1.64%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761938442889" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763186970545.jpg" alt="星座運勢日曆 age 22-48 4:5原圖 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.39</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -63%（上一個 7 天 3.74）</div><div class="pd">—｜圖片／分享</div><div class="ck">星座運勢日曆 age 22-48 4:5原圖</div>
+<dl><div><dt>花費</dt><dd>NT$27,209</dd></div><div><dt>購買</dt><dd>26</dd></div><div><dt>每次購買成本</dt><dd>NT$1,046</dd></div><div><dt>點擊率</dt><dd>0.80%</dd></div></dl>
+<div class="cf">出現在 7 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366525558966527" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248762626440545.jpg" alt="煦暖曆｜日曆特寫-靜態圖1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.91</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -43%（上一個 7 天 5.09）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">煦暖曆｜日曆特寫-靜態圖1:1</div>
+<dl><div><dt>花費</dt><dd>NT$24,674</dd></div><div><dt>購買</dt><dd>35</dd></div><div><dt>每次購買成本</dt><dd>NT$705</dd></div><div><dt>點擊率</dt><dd>1.25%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366487825636967" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248942549820545.jpg" alt="1:1 .2 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.30</span></div>
+<div class="cb"><div class="tr flat">▬ 持平 +2%（上一個 7 天 3.23）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">1:1 .2</div>
+<dl><div><dt>花費</dt><dd>NT$20,353</dd></div><div><dt>購買</dt><dd>39</dd></div><div><dt>每次購買成本</dt><dd>NT$522</dd></div><div><dt>點擊率</dt><dd>0.96%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1378012747817808" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248963237270545.jpg" alt="20260904手帳 煦暖曆手帳  2027 手帳記事本4:5 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -45%（上一個 7 天 5.43）</div><div class="pd">煦暖曆／手帳｜影片</div><div class="ck">20260904手帳 煦暖曆手帳  2027 手帳記事本4:5</div>
+<dl><div><dt>花費</dt><dd>NT$13,915</dd></div><div><dt>購買</dt><dd>28</dd></div><div><dt>每次購買成本</dt><dd>NT$497</dd></div><div><dt>點擊率</dt><dd>1.76%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1379116074374142" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248854520630545.jpg" alt="2027 鮮花圖鑑日曆3-4x5.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.89</span></div>
+<div class="cb"><div class="tr flat">▬ 持平 -3%（上一個 7 天 2.97）</div><div class="pd">—｜圖片／分享</div><div class="ck">2027 鮮花圖鑑日曆3-4x5.png</div>
+<dl><div><dt>花費</dt><dd>NT$15,905</dd></div><div><dt>購買</dt><dd>26</dd></div><div><dt>每次購買成本</dt><dd>NT$612</dd></div><div><dt>點擊率</dt><dd>0.86%</dd></div></dl>
+<div class="cf">出現在 7 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1372217741730642" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248886202040545.jpg" alt="16.9 6.1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.17</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -59%（上一個 7 天 7.73）</div><div class="pd">—｜圖片／分享</div><div class="ck">16.9 6.1</div>
+<dl><div><dt>花費</dt><dd>NT$30,709</dd></div><div><dt>購買</dt><dd>58</dd></div><div><dt>每次購買成本</dt><dd>NT$529</dd></div><div><dt>點擊率</dt><dd>1.83%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1374089451543471" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848316920545.jpg" alt="0826_超早鳥即將結束 煦暖曆手帳  2027 手帳記事本4-9x16.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -66%（上一個 7 天 5.82）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束 煦暖曆手帳  2027 手帳記事本4-9x16.png</div>
+<dl><div><dt>花費</dt><dd>NT$33,904</dd></div><div><dt>購買</dt><dd>56</dd></div><div><dt>每次購買成本</dt><dd>NT$605</dd></div><div><dt>點擊率</dt><dd>1.33%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761911776225" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248963237280545.jpg" alt="20260904手帳 煦暖曆手帳  2027 手帳記事本80 png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.55</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +83%（上一個 7 天 1.40）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">20260904手帳 煦暖曆手帳  2027 手帳記事本80 png</div>
+<dl><div><dt>花費</dt><dd>NT$13,710</dd></div><div><dt>購買</dt><dd>25</dd></div><div><dt>每次購買成本</dt><dd>NT$548</dd></div><div><dt>點擊率</dt><dd>2.84%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1379116267707456" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848797330545.jpg" alt="2027 幹話日曆 2 9：16.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.30</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -68%（上一個 7 天 7.13）</div><div class="pd">幹話曆｜圖片／分享</div><div class="ck">2027 幹話日曆 2 9：16.png</div>
+<dl><div><dt>花費</dt><dd>NT$23,252</dd></div><div><dt>購買</dt><dd>37</dd></div><div><dt>每次購買成本</dt><dd>NT$628</dd></div><div><dt>點擊率</dt><dd>1.08%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371763195109430" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248827291120545.jpg" alt="語錄卡網紅dai 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.02</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -17%（上一個 7 天 2.42）</div><div class="pd">煦暖曆／手帳｜影片</div><div class="ck">語錄卡網紅dai</div>
+<dl><div><dt>花費</dt><dd>NT$12,305</dd></div><div><dt>購買</dt><dd>26</dd></div><div><dt>每次購買成本</dt><dd>NT$473</dd></div><div><dt>點擊率</dt><dd>1.38%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1370879218531161" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848904400545.jpg" alt="2027 幹話日曆4 4：5.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.75</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -40%（上一個 7 天 4.62）</div><div class="pd">幹話曆｜圖片／分享</div><div class="ck">2027 幹話日曆4 4：5.png</div>
+<dl><div><dt>花費</dt><dd>NT$22,461</dd></div><div><dt>購買</dt><dd>39</dd></div><div><dt>每次購買成本</dt><dd>NT$576</dd></div><div><dt>點擊率</dt><dd>1.44%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371762161776200" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763549710545.jpg" alt="電子版日曆｜ig 365互動貼文9x16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.22</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -36%（上一個 7 天 3.49）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">電子版日曆｜ig 365互動貼文9x16</div>
+<dl><div><dt>花費</dt><dd>NT$8,024</dd></div><div><dt>購買</dt><dd>16</dd></div><div><dt>每次購買成本</dt><dd>NT$502</dd></div><div><dt>點擊率</dt><dd>1.33%</dd></div></dl>
+<div class="cf">出現在 1 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366547182297698" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248842158650545.jpg" alt="幹話厭世語錄日曆 華納9:16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.08</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -55%（上一個 7 天 4.63）</div><div class="pd">幹話曆｜影片</div><div class="ck">幹話厭世語錄日曆 華納9:16</div>
+<dl><div><dt>花費</dt><dd>NT$24,687</dd></div><div><dt>購買</dt><dd>26</dd></div><div><dt>每次購買成本</dt><dd>NT$950</dd></div><div><dt>點擊率</dt><dd>0.88%</dd></div></dl>
+<div class="cf">出現在 10 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366510128968070" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248854590810545.jpg" alt="0826_超早鳥即將結束 星座日曆2027 星座運勢日曆4-9x16.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.46</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -51%（上一個 7 天 5.00）</div><div class="pd">—｜圖片／分享</div><div class="ck">0826_超早鳥即將結束 星座日曆2027 星座運勢日曆4-9x16.png</div>
+<dl><div><dt>花費</dt><dd>NT$17,745</dd></div><div><dt>購買</dt><dd>26</dd></div><div><dt>每次購買成本</dt><dd>NT$682</dd></div><div><dt>點擊率</dt><dd>0.90%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1372218145063935" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248854520590545.jpg" alt="2027 鮮花圖鑑日曆gif-4x5.gif 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.23</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -66%（上一個 7 天 3.63）</div><div class="pd">—｜影片</div><div class="ck">2027 鮮花圖鑑日曆gif-4x5.gif</div>
+<dl><div><dt>花費</dt><dd>NT$6,770</dd></div><div><dt>購買</dt><dd>7</dd></div><div><dt>每次購買成本</dt><dd>NT$967</dd></div><div><dt>點擊率</dt><dd>0.74%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1372217865063963" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248788248830545.jpg" alt="煦暖曆｜日曆特寫 1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.31</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -60%（上一個 7 天 3.32）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">煦暖曆｜日曆特寫 1:1</div>
+<dl><div><dt>花費</dt><dd>NT$18,432</dd></div><div><dt>購買</dt><dd>18</dd></div><div><dt>每次購買成本</dt><dd>NT$1,024</dd></div><div><dt>點擊率</dt><dd>1.28%</dd></div></dl>
+<div class="cf">出現在 10 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1407326991553050" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249002434760545.jpg" alt="電子版日曆｜類似廣告受眾 (1% to 2%) - 語錄卡_VC_30days1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.68</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +57%（上一個 7 天 1.07）</div><div class="pd">—｜影片</div><div class="ck">電子版日曆｜類似廣告受眾 (1% to 2%) - 語錄卡_VC_30days1:1</div>
+<dl><div><dt>花費</dt><dd>NT$12,692</dd></div><div><dt>購買</dt><dd>14</dd></div><div><dt>每次購買成本</dt><dd>NT$907</dd></div><div><dt>點擊率</dt><dd>1.78%</dd></div></dl>
+<div class="cf">出現在 6 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1381393420813074" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248759760610545.jpg" alt="早鳥預購-煦暖月曆9x16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.51</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -54%（上一個 7 天 3.30）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">早鳥預購-煦暖月曆9x16</div>
+<dl><div><dt>花費</dt><dd>NT$12,491</dd></div><div><dt>購買</dt><dd>14</dd></div><div><dt>每次購買成本</dt><dd>NT$892</dd></div><div><dt>點擊率</dt><dd>1.38%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366367842315632" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr on"><div class="ph"><img src="img/120249040658930545.jpg" alt="0826_超早鳥即將結束-幹話日曆4x5 貼文圖片" loading="lazy"><span class="st on">投遞中</span><span class="r big good">ROAS 3.15</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -17%（上一個 7 天 3.80）</div><div class="pd">幹話曆｜影片</div><div class="ck">0826_超早鳥即將結束-幹話日曆4x5</div>
+<dl><div><dt>花費</dt><dd>NT$11,344</dd></div><div><dt>購買</dt><dd>28</dd></div><div><dt>每次購買成本</dt><dd>NT$405</dd></div><div><dt>點擊率</dt><dd>1.94%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761991776217" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248847624050545.jpg" alt="0826_超早鳥即將結束-煦暖曆3 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.52</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -81%（上一個 7 天 8.12）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束-煦暖曆3</div>
+<dl><div><dt>花費</dt><dd>NT$10,468</dd></div><div><dt>購買</dt><dd>13</dd></div><div><dt>每次購買成本</dt><dd>NT$805</dd></div><div><dt>點擊率</dt><dd>0.78%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371664318452651" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248926970610545.jpg" alt="CC 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.84</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +77%（上一個 7 天 2.17）</div><div class="pd">煦暖曆／手帳｜影片</div><div class="ck">CC</div>
+<dl><div><dt>花費</dt><dd>NT$9,357</dd></div><div><dt>購買</dt><dd>20</dd></div><div><dt>每次購買成本</dt><dd>NT$468</dd></div><div><dt>點擊率</dt><dd>1.67%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/2266220860256819/posts/1048702654715931" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248762633530545.jpg" alt="煦暖曆｜日曆撕紙貼在牆上-靜態圖1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.91</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -37%（上一個 7 天 4.64）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">煦暖曆｜日曆撕紙貼在牆上-靜態圖1:1</div>
+<dl><div><dt>花費</dt><dd>NT$6,905</dd></div><div><dt>購買</dt><dd>12</dd></div><div><dt>每次購買成本</dt><dd>NT$575</dd></div><div><dt>點擊率</dt><dd>1.05%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366487838970299" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248788248870545.jpg" alt="煦暖曆｜單本日曆1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.82</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -54%（上一個 7 天 3.93）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">煦暖曆｜單本日曆1:1</div>
+<dl><div><dt>花費</dt><dd>NT$8,095</dd></div><div><dt>購買</dt><dd>11</dd></div><div><dt>每次購買成本</dt><dd>NT$736</dd></div><div><dt>點擊率</dt><dd>0.97%</dd></div></dl>
+<div class="cf">出現在 9 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1407327001553049" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248834169840545.jpg" alt="星座運勢日曆 age 22-489:16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.55</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -39%（上一個 7 天 4.19）</div><div class="pd">—｜圖片／分享</div><div class="ck">星座運勢日曆 age 22-489:16</div>
+<dl><div><dt>花費</dt><dd>NT$7,951</dd></div><div><dt>購買</dt><dd>14</dd></div><div><dt>每次購買成本</dt><dd>NT$568</dd></div><div><dt>點擊率</dt><dd>1.49%</dd></div></dl>
+<div class="cf">出現在 6 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1370877695197980" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248759969070545.jpg" alt="早鳥語錄卡-生活品質（心理學）chat gpt 1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big bad">ROAS 0.64</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -87%（上一個 7 天 5.07）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">早鳥語錄卡-生活品質（心理學）chat gpt 1:1</div>
+<dl><div><dt>花費</dt><dd>NT$4,635</dd></div><div><dt>購買</dt><dd>3</dd></div><div><dt>每次購買成本</dt><dd>NT$1,545</dd></div><div><dt>點擊率</dt><dd>1.16%</dd></div></dl>
+<div class="cf">出現在 2 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366488438970239" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248926970630545.jpg" alt="nini 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 4.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -11%（上一個 7 天 4.52）</div><div class="pd">—｜影片</div><div class="ck">nini</div>
+<dl><div><dt>花費</dt><dd>NT$8,867</dd></div><div><dt>購買</dt><dd>22</dd></div><div><dt>每次購買成本</dt><dd>NT$403</dd></div><div><dt>點擊率</dt><dd>1.18%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/147828045079616/posts/1752249386015374" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248759300510545.jpg" alt="早鳥預購-旅行機票日曆-煦暖曆FB互動7D-1Y 4:5 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.90</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -51%（上一個 7 天 3.91）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">早鳥預購-旅行機票日曆-煦暖曆FB互動7D-1Y 4:5</div>
+<dl><div><dt>花費</dt><dd>NT$8,028</dd></div><div><dt>購買</dt><dd>7</dd></div><div><dt>每次購買成本</dt><dd>NT$1,147</dd></div><div><dt>點擊率</dt><dd>0.50%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366367628982320" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248886202030545.jpg" alt="4x5 -02 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.63</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -46%（上一個 7 天 6.69）</div><div class="pd">—｜圖片／分享</div><div class="ck">4x5 -02</div>
+<dl><div><dt>花費</dt><dd>NT$8,563</dd></div><div><dt>購買</dt><dd>16</dd></div><div><dt>每次購買成本</dt><dd>NT$535</dd></div><div><dt>點擊率</dt><dd>2.11%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1374089298210153" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848841920545.jpg" alt="2027 幹話日曆 3 4：5.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 4.53</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">幹話曆｜圖片／分享</div><div class="ck">2027 幹話日曆 3 4：5.png</div>
+<dl><div><dt>花費</dt><dd>NT$3,580</dd></div><div><dt>購買</dt><dd>9</dd></div><div><dt>每次購買成本</dt><dd>NT$398</dd></div><div><dt>點擊率</dt><dd>1.39%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371762141776202" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248762626470545.jpg" alt="煦暖曆煦暖曆｜單本日曆1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.27</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">煦暖曆煦暖曆｜單本日曆1:1</div>
+<dl><div><dt>花費</dt><dd>NT$3,231</dd></div><div><dt>購買</dt><dd>8</dd></div><div><dt>每次購買成本</dt><dd>NT$404</dd></div><div><dt>點擊率</dt><dd>1.65%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366487805636969" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249007356200545.jpg" alt="0826_超早鳥即將結束 星座日曆2027 2027 星座運勢日曆gif9:16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.85</span></div>
+<div class="cb"><div class="tr new">🆕 新素材（上一個 7 天沒有花費）</div><div class="pd">—｜影片</div><div class="ck">0826_超早鳥即將結束 星座日曆2027 2027 星座運勢日曆gif9:16</div>
+<dl><div><dt>花費</dt><dd>NT$3,989</dd></div><div><dt>購買</dt><dd>6</dd></div><div><dt>每次購買成本</dt><dd>NT$665</dd></div><div><dt>點擊率</dt><dd>1.01%</dd></div></dl>
+<div class="cf">出現在 10 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1381635720788844" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248854585510545.jpg" alt="0826_超早鳥即將結束 星座日曆2027 星座運勢日曆2-4x5.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.44</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -55%（上一個 7 天 5.42）</div><div class="pd">—｜圖片／分享</div><div class="ck">0826_超早鳥即將結束 星座日曆2027 星座運勢日曆2-4x5.png</div>
+<dl><div><dt>花費</dt><dd>NT$4,400</dd></div><div><dt>購買</dt><dd>7</dd></div><div><dt>每次購買成本</dt><dd>NT$629</dd></div><div><dt>點擊率</dt><dd>0.78%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1372217748397308" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249096567060545.jpg" alt="2027 星座曆 近期壽星115-1：1.gif mixed 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.15</span></div>
+<div class="cb"><div class="tr new">🆕 新素材（上一個 7 天沒有花費）</div><div class="pd">—｜影片</div><div class="ck">2027 星座曆 近期壽星115-1：1.gif mixed</div>
+<dl><div><dt>花費</dt><dd>NT$4,982</dd></div><div><dt>購買</dt><dd>9</dd></div><div><dt>每次購買成本</dt><dd>NT$554</dd></div><div><dt>點擊率</dt><dd>0.76%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1388945330057883" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249002165730545.jpg" alt="88-1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big bad">ROAS 0.41</span></div>
+<div class="cb"><div class="tr new">🆕 新素材（上一個 7 天沒有花費）</div><div class="pd">—｜圖片／分享</div><div class="ck">88-1:1</div>
+<dl><div><dt>花費</dt><dd>NT$4,436</dd></div><div><dt>購買</dt><dd>1</dd></div><div><dt>每次購買成本</dt><dd>NT$4,436</dd></div><div><dt>點擊率</dt><dd>0.70%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1381371040815312" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848266920545.jpg" alt="0826_超早鳥即將結束 煦暖曆手帳  2027 手帳記事本1-9x16.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.51</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -47%（上一個 7 天 4.69）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束 煦暖曆手帳  2027 手帳記事本1-9x16.png</div>
+<dl><div><dt>花費</dt><dd>NT$5,857</dd></div><div><dt>購買</dt><dd>13</dd></div><div><dt>每次購買成本</dt><dd>NT$451</dd></div><div><dt>點擊率</dt><dd>2.08%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761731776243" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248759606910545.jpg" alt="早鳥預購-花語圖鑑日曆-類似廣告受眾 (1% to 2%) - 煦暖曆 - Shopify using Purchase4:5 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.52</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +26%（上一個 7 天 2.00）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">早鳥預購-花語圖鑑日曆-類似廣告受眾 (1% to 2%) - 煦暖曆 - Shopify using Purchase4:5</div>
+<dl><div><dt>花費</dt><dd>NT$5,481</dd></div><div><dt>購買</dt><dd>3</dd></div><div><dt>每次購買成本</dt><dd>NT$1,827</dd></div><div><dt>點擊率</dt><dd>0.98%</dd></div></dl>
+<div class="cf">出現在 7 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366367685648981" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248834170010545.jpg" alt="星座運勢日曆 age 22-48 1:1 原圖 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.93</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -48%（上一個 7 天 3.71）</div><div class="pd">—｜圖片／分享</div><div class="ck">星座運勢日曆 age 22-48 1:1 原圖</div>
+<dl><div><dt>花費</dt><dd>NT$3,427</dd></div><div><dt>購買</dt><dd>5</dd></div><div><dt>每次購買成本</dt><dd>NT$685</dd></div><div><dt>點擊率</dt><dd>1.01%</dd></div></dl>
+<div class="cf">出現在 6 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1370877295198020" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248847645400545.jpg" alt="0826_超早鳥即將結束-煦暖曆2 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.34</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -67%（上一個 7 天 4.08）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束-煦暖曆2</div>
+<dl><div><dt>花費</dt><dd>NT$1,893</dd></div><div><dt>購買</dt><dd>3</dd></div><div><dt>每次購買成本</dt><dd>NT$631</dd></div><div><dt>點擊率</dt><dd>1.12%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371664268452656" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248886202080545.jpg" alt="4x5 -08 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 4.01</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +57%（上一個 7 天 2.55）</div><div class="pd">—｜圖片／分享</div><div class="ck">4x5 -08</div>
+<dl><div><dt>花費</dt><dd>NT$4,050</dd></div><div><dt>購買</dt><dd>10</dd></div><div><dt>每次購買成本</dt><dd>NT$405</dd></div><div><dt>點擊率</dt><dd>1.74%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1374089221543494" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248926970650545.jpg" alt="tracy 語錄卡 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 4.79</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -45%（上一個 7 天 8.66）</div><div class="pd">—｜影片</div><div class="ck">tracy 語錄卡</div>
+<dl><div><dt>花費</dt><dd>NT$1,727</dd></div><div><dt>購買</dt><dd>6</dd></div><div><dt>每次購買成本</dt><dd>NT$288</dd></div><div><dt>點擊率</dt><dd>1.85%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/957365450786380/posts/2191454588083014" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248759272040545.jpg" alt="早鳥預購-旅行機票日曆-煦暖曆FB互動7D-1Y 9:16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big bad">ROAS 0.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -100%（上一個 7 天 7.52）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">早鳥預購-旅行機票日曆-煦暖曆FB互動7D-1Y 9:16</div>
+<dl><div><dt>花費</dt><dd>NT$1,687</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.55%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366367875648962" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848086780545.jpg" alt="0826_超早鳥即將結束-旅行機票日曆1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.19</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +86%（上一個 7 天 1.71）</div><div class="pd">旅行機票日曆｜圖片／分享</div><div class="ck">0826_超早鳥即將結束-旅行機票日曆1</div>
+<dl><div><dt>花費</dt><dd>NT$1,465</dd></div><div><dt>購買</dt><dd>2</dd></div><div><dt>每次購買成本</dt><dd>NT$732</dd></div><div><dt>點擊率</dt><dd>1.10%</dd></div></dl>
+<div class="cf">出現在 2 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761268442956" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848305280545.jpg" alt="0826_超早鳥即將結束 煦暖曆手帳  2027 手帳記事本3-9x16.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.58</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -49%（上一個 7 天 5.06）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束 煦暖曆手帳  2027 手帳記事本3-9x16.png</div>
+<dl><div><dt>花費</dt><dd>NT$3,131</dd></div><div><dt>購買</dt><dd>5</dd></div><div><dt>每次購買成本</dt><dd>NT$626</dd></div><div><dt>點擊率</dt><dd>1.96%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761698442913" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248842158660545.jpg" alt="幹話厭世語錄日曆 華納1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.82</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +12%（上一個 7 天 3.40）</div><div class="pd">幹話曆｜影片</div><div class="ck">幹話厭世語錄日曆 華納1:1</div>
+<dl><div><dt>花費</dt><dd>NT$2,283</dd></div><div><dt>購買</dt><dd>4</dd></div><div><dt>每次購買成本</dt><dd>NT$571</dd></div><div><dt>點擊率</dt><dd>0.80%</dd></div></dl>
+<div class="cf">出現在 7 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366510122301404" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248834169910545.jpg" alt="星座運勢日曆 age 22-48 1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big bad">ROAS 0.60</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">—｜圖片／分享</div><div class="ck">星座運勢日曆 age 22-48 1:1</div>
+<dl><div><dt>花費</dt><dd>NT$1,460</dd></div><div><dt>購買</dt><dd>1</dd></div><div><dt>每次購買成本</dt><dd>NT$1,460</dd></div><div><dt>點擊率</dt><dd>1.33%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1370877378531345" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848098270545.jpg" alt="0826_超早鳥即將結束 煦暖曆手帳  手帳記事本2-9x16.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.36</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -77%（上一個 7 天 5.90）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束 煦暖曆手帳  手帳記事本2-9x16.png</div>
+<dl><div><dt>花費</dt><dd>NT$1,295</dd></div><div><dt>購買</dt><dd>2</dd></div><div><dt>每次購買成本</dt><dd>NT$648</dd></div><div><dt>點擊率</dt><dd>2.29%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761828442900" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763540850545.jpg" alt="電子版日曆｜類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單9x16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.87</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +55%（上一個 7 天 1.85）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">電子版日曆｜類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單9x16</div>
+<dl><div><dt>花費</dt><dd>NT$1,162</dd></div><div><dt>購買</dt><dd>2</dd></div><div><dt>每次購買成本</dt><dd>NT$581</dd></div><div><dt>點擊率</dt><dd>2.51%</dd></div></dl>
+<div class="cf">出現在 1 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366547182297698" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248759529930545.jpg" alt="早鳥預購-花語圖鑑日曆-類似廣告受眾 (1% to 2%) - 煦暖曆 - Shopify using Purchase9:16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.77</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -37%（上一個 7 天 2.79）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">早鳥預購-花語圖鑑日曆-類似廣告受眾 (1% to 2%) - 煦暖曆 - Shopify using Purchase9:16</div>
+<dl><div><dt>花費</dt><dd>NT$1,592</dd></div><div><dt>購買</dt><dd>2</dd></div><div><dt>每次購買成本</dt><dd>NT$796</dd></div><div><dt>點擊率</dt><dd>0.87%</dd></div></dl>
+<div class="cf">出現在 2 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366367615648988" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248834169830545.jpg" alt="星座運勢日曆 age 22-48 4:5 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.36</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -59%（上一個 7 天 5.73）</div><div class="pd">—｜圖片／分享</div><div class="ck">星座運勢日曆 age 22-48 4:5</div>
+<dl><div><dt>花費</dt><dd>NT$1,530</dd></div><div><dt>購買</dt><dd>3</dd></div><div><dt>每次購買成本</dt><dd>NT$510</dd></div><div><dt>點擊率</dt><dd>1.25%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1370877495198000" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248759783150545.jpg" alt="早鳥預購-煦暖月曆1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.08</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -77%（上一個 7 天 4.76）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">早鳥預購-煦暖月曆1:1</div>
+<dl><div><dt>花費</dt><dd>NT$869</dd></div><div><dt>購買</dt><dd>1</dd></div><div><dt>每次購買成本</dt><dd>NT$869</dd></div><div><dt>點擊率</dt><dd>1.64%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366367755648974" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248842328960545.jpg" alt="早鳥預購-花語圖鑑日曆-類似廣告受眾 (1% to 2%) - 煦暖曆 - Shopify using Purchase1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.77</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +396%（上一個 7 天 0.36）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">早鳥預購-花語圖鑑日曆-類似廣告受眾 (1% to 2%) - 煦暖曆 - Shopify using Purchase1:1</div>
+<dl><div><dt>花費</dt><dd>NT$1,493</dd></div><div><dt>購買</dt><dd>1</dd></div><div><dt>每次購買成本</dt><dd>NT$1,493</dd></div><div><dt>點擊率</dt><dd>1.45%</dd></div></dl>
+<div class="cf">出現在 6 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366367428982340" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848080670545.jpg" alt="0826_超早鳥即將結束-旅行機票日曆3 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 3.13</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">旅行機票日曆｜圖片／分享</div><div class="ck">0826_超早鳥即將結束-旅行機票日曆3</div>
+<dl><div><dt>花費</dt><dd>NT$1,174</dd></div><div><dt>購買</dt><dd>3</dd></div><div><dt>每次購買成本</dt><dd>NT$391</dd></div><div><dt>點擊率</dt><dd>0.91%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761728442910" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248963237250545.jpg" alt="20260904手帳 煦暖曆手帳  2027 手帳記事本9:16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big bad">ROAS 0.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -100%（上一個 7 天 3.22）</div><div class="pd">煦暖曆／手帳｜影片</div><div class="ck">20260904手帳 煦暖曆手帳  2027 手帳記事本9:16</div>
+<dl><div><dt>花費</dt><dd>NT$867</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>1.54%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1379115997707483" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763533210545.jpg" alt="電子版日曆｜煦暖曆-類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名9x16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big bad">ROAS 0.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -100%（上一個 7 天 0.75）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">電子版日曆｜煦暖曆-類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名9x16</div>
+<dl><div><dt>花費</dt><dd>NT$668</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>2.06%</dd></div></dl>
+<div class="cf">出現在 1 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366547308964352" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248834169970545.jpg" alt="煦暖曆｜煦暖曆｜台灣模特兒與日曆 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.33</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -72%（上一個 7 天 4.75）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">煦暖曆｜煦暖曆｜台灣模特兒與日曆</div>
+<dl><div><dt>花費</dt><dd>NT$708</dd></div><div><dt>購買</dt><dd>1</dd></div><div><dt>每次購買成本</dt><dd>NT$708</dd></div><div><dt>點擊率</dt><dd>1.41%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1370877788531304" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848080720545.jpg" alt="0826_超早鳥即將結束-旅行機票日曆4 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big mid">ROAS 1.55</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">旅行機票日曆｜圖片／分享</div><div class="ck">0826_超早鳥即將結束-旅行機票日曆4</div>
+<dl><div><dt>花費</dt><dd>NT$671</dd></div><div><dt>購買</dt><dd>1</dd></div><div><dt>每次購買成本</dt><dd>NT$671</dd></div><div><dt>點擊率</dt><dd>0.88%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761985109551" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848841990545.jpg" alt="2027 多日历幹話日曆 9-16gif.gif 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.56</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">幹話曆｜影片</div><div class="ck">2027 多日历幹話日曆 9-16gif.gif</div>
+<dl><div><dt>花費</dt><dd>NT$601</dd></div><div><dt>購買</dt><dd>1</dd></div><div><dt>每次購買成本</dt><dd>NT$601</dd></div><div><dt>點擊率</dt><dd>1.05%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371762218442861" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248759754130545.jpg" alt="早鳥預購-煦暖月曆4x5 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big good">ROAS 2.58</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +26%（上一個 7 天 2.05）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">早鳥預購-煦暖月曆4x5</div>
+<dl><div><dt>花費</dt><dd>NT$697</dd></div><div><dt>購買</dt><dd>1</dd></div><div><dt>每次購買成本</dt><dd>NT$697</dd></div><div><dt>點擊率</dt><dd>1.05%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366367622315654" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763549690545.jpg" alt="電子版日曆｜ig 365互動貼文4x5 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -100%（上一個 7 天 4.00）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">電子版日曆｜ig 365互動貼文4x5</div>
+<dl><div><dt>花費</dt><dd>NT$485</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.87%</dd></div></dl>
+<div class="cf">出現在 1 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366547148964368" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248759969090545.jpg" alt="早鳥語錄卡-生活品質（心理學）1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 1.40</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +100%（上一個 7 天 0.00）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">早鳥語錄卡-生活品質（心理學）1:1</div>
+<dl><div><dt>花費</dt><dd>NT$427</dd></div><div><dt>購買</dt><dd>1</dd></div><div><dt>每次購買成本</dt><dd>NT$427</dd></div><div><dt>點擊率</dt><dd>2.17%</dd></div></dl>
+<div class="cf">出現在 2 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366488428970240" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249007356270545.jpg" alt="0826_超早鳥即將結束 星座日曆2027 星座運勢日曆巨蟹座 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big bad">ROAS 0.00</span></div>
+<div class="cb"><div class="tr new">🆕 新素材（上一個 7 天沒有花費）</div><div class="pd">—｜圖片／分享</div><div class="ck">0826_超早鳥即將結束 星座日曆2027 星座運勢日曆巨蟹座</div>
+<dl><div><dt>花費</dt><dd>NT$710</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.61%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1381635747455508" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248926970640545.jpg" alt="Dai 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big bad">ROAS 0.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -100%（上一個 7 天 1.11）</div><div class="pd">煦暖曆／手帳｜影片</div><div class="ck">Dai</div>
+<dl><div><dt>花費</dt><dd>NT$503</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>3.50%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/113102008552899/posts/928737250286612" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248942549800545.jpg" alt="1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big bad">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">—｜圖片／分享</div><div class="ck">1:1</div>
+<dl><div><dt>花費</dt><dd>NT$574</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.65%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1378012497817833" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763200950545.jpg" alt="星座運勢日曆 age 22-489:16原圖 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big bad">ROAS 0.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -100%（上一個 7 天 2.47）</div><div class="pd">—｜圖片／分享</div><div class="ck">星座運勢日曆 age 22-489:16原圖</div>
+<dl><div><dt>花費</dt><dd>NT$592</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.66%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366525522299864" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248759300520545.jpg" alt="早鳥預購-旅行機票日曆-煦暖曆FB互動7D-1Y 1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -100%（上一個 7 天 3.18）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">早鳥預購-旅行機票日曆-煦暖曆FB互動7D-1Y 1:1</div>
+<dl><div><dt>花費</dt><dd>NT$384</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.49%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366367742315642" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248926970660545.jpg" alt="天使心室 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -100%（上一個 7 天 4.01）</div><div class="pd">煦暖曆／手帳｜影片</div><div class="ck">天使心室</div>
+<dl><div><dt>花費</dt><dd>NT$297</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>1.44%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/110583295310246/posts/1598819148350137" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr on"><div class="ph"><img src="img/120249040658840545.jpg" alt="2027 幹話日曆 1 9：16.png 貼文圖片" loading="lazy"><span class="st on">投遞中</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">幹話曆｜圖片／分享</div><div class="ck">2027 幹話日曆 1 9：16.png</div>
+<dl><div><dt>花費</dt><dd>NT$286</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.76%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371762078442875" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763558460545.jpg" alt="電子版日曆｜煦暖曆IG互動7D~1Y9x16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -100%（上一個 7 天 6.43）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">電子版日曆｜煦暖曆IG互動7D~1Y9x16</div>
+<dl><div><dt>花費</dt><dd>NT$236</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>1.77%</dd></div></dl>
+<div class="cf">出現在 1 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366547168964366" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248854590820545.jpg" alt="0826_超早鳥即將結束 星座日曆2027 2027 星座運勢日曆3-4x5.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big bad">ROAS 0.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -100%（上一個 7 天 2.28）</div><div class="pd">—｜圖片／分享</div><div class="ck">0826_超早鳥即將結束 星座日曆2027 2027 星座運勢日曆3-4x5.png</div>
+<dl><div><dt>花費</dt><dd>NT$620</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.61%</dd></div></dl>
+<div class="cf">出現在 10 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1372218055063944" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848904430545.jpg" alt="2027 单日历幹話日曆gif 9-16.gif 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 7.31</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">幹話曆｜影片</div><div class="ck">2027 单日历幹話日曆gif 9-16.gif</div>
+<dl><div><dt>花費</dt><dd>NT$246</dd></div><div><dt>購買</dt><dd>1</dd></div><div><dt>每次購買成本</dt><dd>NT$246</dd></div><div><dt>點擊率</dt><dd>1.63%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371762295109520" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249040659200545.jpg" alt="0826_超早鳥即將結束-煦暖曆5 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束-煦暖曆5</div>
+<dl><div><dt>花費</dt><dd>NT$321</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.70%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1383182747300808" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249002169670545.jpg" alt="87-5-2 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr new">🆕 新素材（上一個 7 天沒有花費）</div><div class="pd">—｜圖片／分享</div><div class="ck">87-5-2</div>
+<dl><div><dt>花費</dt><dd>NT$314</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.21%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1381371054148644" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249096564160545.jpg" alt="2027 星座曆 近期壽星115-1：1.gif 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr new">🆕 新素材（上一個 7 天沒有花費）</div><div class="pd">—｜影片</div><div class="ck">2027 星座曆 近期壽星115-1：1.gif</div>
+<dl><div><dt>花費</dt><dd>NT$196</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.21%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1388945403391209" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249007356140545.jpg" alt="0826_超早鳥即將結束 星座日曆2027 天蠍 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr new">🆕 新素材（上一個 7 天沒有花費）</div><div class="pd">—｜圖片／分享</div><div class="ck">0826_超早鳥即將結束 星座日曆2027 天蠍</div>
+<dl><div><dt>花費</dt><dd>NT$202</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.43%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1381635697455513" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248886202060545.jpg" alt="4x5 -01 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">—｜圖片／分享</div><div class="ck">4x5 -01</div>
+<dl><div><dt>花費</dt><dd>NT$125</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>1.92%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1374089151543501" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249002420670545.jpg" alt="電子版日曆｜類似廣告受眾 (1% to 2%) - 語錄卡_VC_30days4x5 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">旅行機票日曆｜圖片／分享</div><div class="ck">電子版日曆｜類似廣告受眾 (1% to 2%) - 語錄卡_VC_30days4x5</div>
+<dl><div><dt>花費</dt><dd>NT$95</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>1.44%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1381393320813084" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249040659240545.jpg" alt="2027 幹話日曆 1 4：5.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 22.73</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">幹話曆｜圖片／分享</div><div class="ck">2027 幹話日曆 1 4：5.png</div>
+<dl><div><dt>花費</dt><dd>NT$116</dd></div><div><dt>購買</dt><dd>1</dd></div><div><dt>每次購買成本</dt><dd>NT$116</dd></div><div><dt>點擊率</dt><dd>0.32%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371762151776201" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848293680545.jpg" alt="0826_超早鳥即將結束 煦暖曆手帳  2027 手帳記事本3-4x5.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 12.41</span></div>
+<div class="cb"><div class="tr up">▲ 上升 +111%（上一個 7 天 5.90）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束 煦暖曆手帳  2027 手帳記事本3-4x5.png</div>
+<dl><div><dt>花費</dt><dd>NT$177</dd></div><div><dt>購買</dt><dd>2</dd></div><div><dt>每次購買成本</dt><dd>NT$88</dd></div><div><dt>點擊率</dt><dd>3.38%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761328442950" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248963237260545.jpg" alt="20260904手帳 煦暖曆手帳  2027 手帳記事本1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">煦暖曆／手帳｜影片</div><div class="ck">20260904手帳 煦暖曆手帳  2027 手帳記事本1:1</div>
+<dl><div><dt>花費</dt><dd>NT$88</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>1.70%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1379116204374129" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249002434750545.jpg" alt="電子版日曆｜旅行曆類似廣告受眾 (1% to 2%) - 語錄卡_VC_30days9x16 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -100%（上一個 7 天 1.79）</div><div class="pd">旅行機票日曆｜圖片／分享</div><div class="ck">電子版日曆｜旅行曆類似廣告受眾 (1% to 2%) - 語錄卡_VC_30days9x16</div>
+<dl><div><dt>花費</dt><dd>NT$120</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>1.88%</dd></div></dl>
+<div class="cf">出現在 6 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1381393404146409" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248933358690545.jpg" alt="row76-77 1-1.gif 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">幹話曆｜影片</div><div class="ck">row76-77 1-1.gif</div>
+<dl><div><dt>花費</dt><dd>NT$108</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>1.50%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1377496221202794" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249040658970545.jpg" alt="0826_超早鳥即將結束-旅行機票日曆5 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">旅行機票日曆｜圖片／分享</div><div class="ck">0826_超早鳥即將結束-旅行機票日曆5</div>
+<dl><div><dt>花費</dt><dd>NT$154</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.56%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761761776240" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763431540545.jpg" alt="電子版日曆｜煦暖曆-類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">電子版日曆｜煦暖曆-類似廣告受眾 (TW, 2%) - 2026煦暖曆系列購買名單1:1</div>
+<dl><div><dt>花費</dt><dd>NT$56</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>1.63%</dd></div></dl>
+<div class="cf">出現在 1 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366547325631017" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249040659140545.jpg" alt="0826_超早鳥即將結束 煦暖曆手帳  2027 手帳記事本1-4x5.png2027 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束 煦暖曆手帳  2027 手帳記事本1-4x5.png2027</div>
+<dl><div><dt>花費</dt><dd>NT$64</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.00%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761821776234" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763558450545.jpg" alt="電子版日曆｜煦暖曆IG互動7D~1Y4x5 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">電子版日曆｜煦暖曆IG互動7D~1Y4x5</div>
+<dl><div><dt>花費</dt><dd>NT$54</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>1.12%</dd></div></dl>
+<div class="cf">出現在 1 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366547148964368" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763540860545.jpg" alt="電子版日曆｜類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單4x5 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr down">▼ 下降 -100%（上一個 7 天 1.74）</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">電子版日曆｜類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單4x5</div>
+<dl><div><dt>花費</dt><dd>NT$51</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>1.88%</dd></div></dl>
+<div class="cf">出現在 1 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366547198964363" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763549700545.jpg" alt="電子版日曆｜ig 365互動貼文1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">電子版日曆｜ig 365互動貼文1:1</div>
+<dl><div><dt>花費</dt><dd>NT$39</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.50%</dd></div></dl>
+<div class="cf">出現在 1 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366547215631028" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249040659070545.jpg" alt="0826_超早鳥即將結束-煦暖曆4 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束-煦暖曆4</div>
+<dl><div><dt>花費</dt><dd>NT$54</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.47%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1383182737300809" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249040659230545.jpg" alt="0826_超早鳥即將結束-煦暖曆1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束-煦暖曆1</div>
+<dl><div><dt>花費</dt><dd>NT$37</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.53%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1383182697300813" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248886202050545.jpg" alt="16.9 1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">—｜圖片／分享</div><div class="ck">16.9 1</div>
+<dl><div><dt>花費</dt><dd>NT$54</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.67%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1374089461543470" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249007356470545.jpg" alt="0826_超早鳥即將結束 星座日曆2027 2027 星座運勢日曆gif 1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr new">🆕 新素材（上一個 7 天沒有花費）</div><div class="pd">—｜影片</div><div class="ck">0826_超早鳥即將結束 星座日曆2027 2027 星座運勢日曆gif 1:1</div>
+<dl><div><dt>花費</dt><dd>NT$94</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.98%</dd></div></dl>
+<div class="cf">出現在 5 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1381635667455516" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248848841950545.jpg" alt="2027 单日历幹話日曆gif 4-5.gif 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">幹話曆｜影片</div><div class="ck">2027 单日历幹話日曆gif 4-5.gif</div>
+<dl><div><dt>花費</dt><dd>NT$42</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>1.46%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371762288442854" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763558440545.jpg" alt="電子版日曆｜煦暖曆IG互動7D~1Y文1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">電子版日曆｜煦暖曆IG互動7D~1Y文1:1</div>
+<dl><div><dt>花費</dt><dd>NT$21</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.34%</dd></div></dl>
+<div class="cf">出現在 1 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366547215631028" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248926970620545.jpg" alt="Irene 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">旅行機票日曆｜影片</div><div class="ck">Irene</div>
+<dl><div><dt>花費</dt><dd>NT$37</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>3.08%</dd></div></dl>
+<div class="cf">出現在 4 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1813582366485696" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248763540880545.jpg" alt="電子版日曆｜類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單1:1 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">電子版日曆｜類似廣告受眾 (TW, 3%) - 填寫2025煦暖曆問卷名單1:1</div>
+<dl><div><dt>花費</dt><dd>NT$14</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>0.96%</dd></div></dl>
+<div class="cf">出現在 1 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1366547202297696" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248854735700545.jpg" alt="0826_超早鳥即將結束-旅行機票日曆irene 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">旅行機票日曆｜影片</div><div class="ck">0826_超早鳥即將結束-旅行機票日曆irene</div>
+<dl><div><dt>花費</dt><dd>NT$15</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>5.56%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1634885634825327" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248854520600545.jpg" alt="2027 鮮花圖鑑日曆1-4x5.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">—｜圖片／分享</div><div class="ck">2027 鮮花圖鑑日曆1-4x5.png</div>
+<dl><div><dt>花費</dt><dd>NT$9</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>4.35%</dd></div></dl>
+<div class="cf">出現在 2 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1372217768397306" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120249040659130545.jpg" alt="0826_超早鳥即將結束 煦暖曆手帳  2027 手帳記事本2-4x5.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">煦暖曆／手帳｜圖片／分享</div><div class="ck">0826_超早鳥即將結束 煦暖曆手帳  2027 手帳記事本2-4x5.png</div>
+<dl><div><dt>花費</dt><dd>NT$6</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>4.00%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1371761355109614" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article>
+<article class="cr off"><div class="ph"><img src="img/120248933428640545.jpg" alt="row76-77 1-1.png 貼文圖片" loading="lazy"><span class="st off">已暫停</span><span class="r big na">ROAS 0.00</span></div>
+<div class="cb"><div class="tr na">上一個 7 天花費太少，不比較</div><div class="pd">幹話曆｜圖片／分享</div><div class="ck">row76-77 1-1.png</div>
+<dl><div><dt>花費</dt><dd>NT$4</dd></div><div><dt>購買</dt><dd>0</dd></div><div><dt>每次購買成本</dt><dd>—</dd></div><div><dt>點擊率</dt><dd>4.76%</dd></div></dl>
+<div class="cf">出現在 3 個廣告 <a href="https://www.facebook.com/104946584515578/posts/1377496167869466" target="_blank" rel="noopener">開貼文 ↗</a></div></div></article></div>
+</section>
+</div>
+<script>
+(()=>{const ROOT="../../",MODE="7d",D="2026-09-13",W="日一二三四五六";
+const j=u=>fetch(ROOT+u,{cache:"no-store"}).then(r=>r.ok?r.json():[]).catch(()=>[]);
+const dt=v=>new Date(v+"T00:00:00"),md=x=>(x.getMonth()+1)+"/"+x.getDate();
+Promise.all([j("days.json"),j("ranges.json")]).then(([days,ranges])=>{
+ const L=MODE=="7d"?ranges:days,path=(m,v)=>ROOT+(m=="7d"?"7d/":"")+v+"/";
+ const lab=v=>{const e=dt(v);if(MODE!="7d")return md(e)+"（"+W[e.getDay()]+"）";const s=new Date(e);s.setDate(e.getDate()-6);return md(s)+"–"+md(e)};
+ const s=document.getElementById("day");s.innerHTML=L.map(v=>'<option value="'+v+'"'+(v==D?" selected":"")+">"+lab(v)+"</option>").join("");
+ s.onchange=()=>{location.href=path(MODE,s.value)};
+ const set=(id,v)=>{if(!v)return;const a=document.getElementById(id);a.href=path(MODE,v);a.removeAttribute("aria-disabled");a.title=lab(v)};
+ const i=L.indexOf(D);if(i>=0){set("prev",L[i+1]);set("next",L[i-1])}
+ const md_=document.getElementById("m-day"),m7=document.getElementById("m-7d");
+ (MODE=="7d"?m7:md_).classList.add("on");(MODE=="7d"?m7:md_).setAttribute("aria-current","page");
+ if(days.length)md_.href=path("day",days.includes(D)?D:days[0]);
+ if(ranges.length)m7.href=path("7d",ranges.includes(D)?D:ranges[0]);else m7.style.display="none";
+})})();
+</script>
+</body>
+</html>
